@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Basic Informations</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
+    <link rel="stylesheet" href="../assets/vendor/inputmask/css/inputmask.css" />
+</head>
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a href="homepage.html"><img src="assets\images/logo.png" width="160" height="80"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                        <div id="custom-search" class="top-search-bar">
+                        <input class="form-control" type="text" placeholder="Search..">
+                        </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="../../dashboard/dashboard.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block">
+                                                        Check out your dashboard to keep in touch with your customers!
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="../../dashboard/product.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block">
+                                                        Your products have been updated.
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="../../dashboard/product.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block">
+                                                        You have uploaded your products. 
+                                                        <div class="notification-date">5 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img src="../../dashboard/welcome.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block">
+                                                        Welcome to TweetC.A.R.D.! Let's work hard together!
+                                                        <div class="notification-date">1 week ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../dashboard/woman.png" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">Jennifer Chen</h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                    Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="instruction.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fab fa-fw fa-wpforms"></i>Instructions</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="instruction.html#tm-section-1">Introduction</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="instruction.html#tm-section-2">Documentation-Recommend</a>
+                                        </li>
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="instruction.html#tm-section-3">Documentation-Context</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="instruction.html#tm-section-4">Documentation-Main&App</a>
+                                        </li>
+                                    </ul>
+                                </div>                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>APP</a>
+                                <div id="submenu-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="basic-informations-tsp.html">Basic Informations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="Credential.html">API Credential</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>BANK</a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="basic-informations -bank.html">Basic Informations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="analysis.html">Analysis</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="products-update.html">Credit Cards Update</a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+            
+            <div class="dashboard-wrapper">
+                <div class="container-fluid dashboard-content">
+                    <div class="row">
+                        <div class="col-xl-10">
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="page-header" id="top">
+                                        <h2 class="pageheader-title">Basic Informations</h2>
+                                        <div class="page-breadcrumb">
+                                            <nav aria-label="breadcrumb">
+                                                <ol class="breadcrumb">
+                                                    <li class="breadcrumb-item"><a href="basic-informations-tsp.html" class="breadcrumb-link">APP</a></li>
+                                                    <li class="breadcrumb-item active" aria-current="page">Basic Informations</li>
+                                                </ol>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <p>-Manage your firm detail informations on this page!</p>        
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="section-block" id="firmdetail">
+                                        <h3 class="section-title">Firm Detail</h3>
+                                    </div>
+                                    <div class="card">
+                                        <h5 class="card-header">Basic Firm Informations</h5>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="inputText3" class="col-form-label">Firm Name</label>
+                                                    <input id="inputText3" type="text" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputEmail">Email address</label>
+                                                    <input id="inputEmail" type="email" placeholder="name@email.com" class="form-control">
+                                                </div>
+                                            
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+
+                                    <div class="card">
+                                        <h5 class="card-header" id="firmtype">Firm Type</h5>
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="input-select">Select Firm Type</label>
+                                                    <select class="form-control" id="input-select">
+                                                        <option>Choose Type</option>
+                                                        <option value="clothing">Clothing</option>
+                                                        <option value="food">Food</option>
+                                                        <option value="shopping">Shopping</option>
+                                                        <option value="E-Commerce">E-Commerce</option>
+                                                    </select>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="section-block" id="program-choosing">
+                                        <h3 class="section-title">Plan Paid</h3>
+                                        <p>Please choose your preferrable plan.</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-126 col-sm-12 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="plan1">
+                                                <label class="custom-control-label" for="plan1">業者體驗方案</label>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="plan1-text">
+                                                <b>免費使用</b>
+                                                <br>
+                                                推薦筆數：300筆推薦結果/天
+                                                <br>
+                                                信用卡優惠種類:一種
+                                                <br>
+                                                更新頻率：每周一次
+                                                <br>
+                                                產品支援：平日上班時段
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-6 col-md-126 col-sm-12 col-12">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="plan2">
+                                                <label class="custom-control-label" for="plan2">業者企業方案</label>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <p class="plan2-text">
+                                                推薦筆數：依需求提供
+                                                <br>
+                                                信用卡優惠種類:二~四種
+                                                <br>
+                                                更新頻率：每天一次
+                                                <br>
+                                                產品支援：平日上班時段
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                               
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="firm_detail">
+                                    <ul class="list-unstyled arrow">
+                                        <li>Remember to check all your inputs once again!</li>
+                                    </ul>
+                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                © 2020 NCCU MIS. TweetC.A.R.D.
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="text-md-right footer-links d-none d-sm-block">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+    </div>
+        <!-- Optional JavaScript -->
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <script src="../assets/libs/js/main-js.js"></script>
+    <script src="../assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
+    <script>
+    $(function(e) {
+        "use strict";
+        $(".date-inputmask").inputmask("dd/mm/yyyy"),
+            $(".phone-inputmask").inputmask("(999) 999-9999"),
+            $(".international-inputmask").inputmask("+9(999)999-9999"),
+            $(".xphone-inputmask").inputmask("(999) 999-9999 / x999999"),
+            $(".purchase-inputmask").inputmask("aaaa 9999-****"),
+            $(".cc-inputmask").inputmask("9999 9999 9999 9999"),
+            $(".ssn-inputmask").inputmask("999-99-9999"),
+            $(".isbn-inputmask").inputmask("999-99-999-9999-9"),
+            $(".currency-inputmask").inputmask("$9999"),
+            $(".percentage-inputmask").inputmask("99%"),
+            $(".decimal-inputmask").inputmask({
+                alias: "decimal",
+                radixPoint: "."
+            }),
+
+            $(".email-inputmask").inputmask({
+                mask: "*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[*{2,6}][*{1,2}].*{1,}[.*{2,6}][.*{1,2}]",
+                greedy: !1,
+                onBeforePaste: function(n, a) {
+                return (e = e.toLowerCase()).replace("mailto:", "")
+                },
+                definitions: {
+                    "*": {
+                        validator: "[0-9A-Za-z!#$%&'*+/=?^_`{|}~/-]",
+                        cardinality: 1,
+                        casing: "lower"
+                    }
+                }
+            })
+        });
+    </script>
+</body>
+ 
+</html>
