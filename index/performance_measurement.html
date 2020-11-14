@@ -4,234 +4,659 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
+<!--{% load static %}-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+       
+
+        <!-- PrismJS: Syntax Highlighting -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/themes/prism.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+
+        <!-- Font Awesome >
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/solid.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css"-->
+
+        <!-- Mustard UI -->
+        <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" language="JavaScript"></script> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Users Online Durations</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="../assets/libs/css/style.css">
-    <link rel="stylesheet" href="../assets/vendor/multi-select/css/multi-select.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <title>Users Management</title>
+
 </head>
 
 <body>
-    
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
     <div class="dashboard-main-wrapper">
-      <div class="dashboard-header">
-            <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a href="index.html"><img src="assets/images/logo.png" width="160" height="80"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto navbar-right-top">
-                        <li class="nav-item">
-                            
-                        </li>
-                        <li class="nav-item dropdown notification">
-                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
-                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
-                                <li>
-                                    <div class="notification-title"> Notification</div>
-                                    <div class="notification-list">
-                                        <div class="list-group">
-                                            <a href="#" class="list-group-item list-group-item-action active">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../../dashboard/dashboard.png" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block">
-                                                        Check out your dashboard to keep in touch with your customers!
-                                                        <div class="notification-date">2 min ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../../dashboard/product.png" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block">
-                                                        Your products have been updated.
-                                                        <div class="notification-date">2 days ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../../dashboard/product.png" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block">
-                                                        You have uploaded your products. 
-                                                        <div class="notification-date">5 days ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                            <a href="#" class="list-group-item list-group-item-action">
-                                                <div class="notification-info">
-                                                    <div class="notification-list-user-img"><img src="../../dashboard/welcome.png" alt="" class="user-avatar-md rounded-circle"></div>
-                                                    <div class="notification-list-user-block">
-                                                        Welcome to TweetC.A.R.D.! Let's work hard together!
-                                                        <div class="notification-date">1 week ago</div>
-                                                    </div>
-                                                </div>
-                                            </a>
+        <div class="dashboard-header">
+              <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                  <a href="homepage.html"><img src="C:\Users\Yuching\Desktop\program\MindReader_api-20200509T145620Z-001\MindReader_api\web\project\pages\assets\images/logo.png" width="160" height="80"></a>
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                      <ul class="navbar-nav ml-auto navbar-right-top">
+                          <li class="nav-item">
+                              
+                          </li>
+                          <li class="nav-item dropdown notification">
+                              <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span class="indicator"></span></a>
+                              <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                  <li>
+                                      <div class="notification-title"> Notification</div>
+                                      <div class="notification-list">
+                                          <div class="list-group">
+                                              <a href="#" class="list-group-item list-group-item-action active">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="../../dashboard/dashboard.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block">
+                                                          Check out your dashboard to keep in touch with your customers!
+                                                          <div class="notification-date">2 min ago</div>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                              <a href="#" class="list-group-item list-group-item-action">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="../../dashboard/product.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block">
+                                                          Your products have been updated.
+                                                          <div class="notification-date">2 days ago</div>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                              <a href="#" class="list-group-item list-group-item-action">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="../../dashboard/product.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block">
+                                                          You have uploaded your products. 
+                                                          <div class="notification-date">5 days ago</div>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                              <a href="#" class="list-group-item list-group-item-action">
+                                                  <div class="notification-info">
+                                                      <div class="notification-list-user-img"><img src="../../dashboard/welcome.png" alt="" class="user-avatar-md rounded-circle"></div>
+                                                      <div class="notification-list-user-block">
+                                                          Welcome to TweetC.A.R.D.! Let's work hard together!
+                                                          <div class="notification-date">1 week ago</div>
+                                                      </div>
+                                                  </div>
+                                              </a>
+                                          </div>
+                                      </div>
+                                  </li>
+                                  <li>
+                                      <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                  </li>
+                              </ul>
+                          </li>
+                          
+                          </li>
+                          <li class="nav-item dropdown nav-user">
+                              <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../dashboard/woman.png" alt="" class="user-avatar-md rounded-circle"></a>
+                              <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                  <div class="nav-user-info">
+                                      <h5 class="mb-0 text-white nav-user-name">Jennifer Chen</h5>
+                                      <span class="status"></span><span class="ml-2">Available</span>
+                                  </div>
+                                  <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                  <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                  <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                              </div>
+                          </li>
+                      </ul>
+                  </div>
+              </nav>
+          </div>
+          
+          <div class="nav-left-sidebar sidebar-dark">
+              <div class="menu-list">
+                  <nav class="navbar navbar-expand-lg navbar-light">
+                      <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNav">
+                          <ul class="navbar-nav flex-column">
+                              <li class="nav-divider">
+                                  Menu
+                              </li>
+  
+                              <li class="nav-item ">
+                                  <a class="nav-link" href="instruction.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fab fa-fw fa-wpforms"></i>Installation</a>
+                                  <div id="submenu-2" class="collapse submenu" style="">
+                                      <ul class="nav flex-column">
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="instruction.html#tm-section-1">Introduction</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="instruction.html#tm-section-5">Getting Started</a>
+                                        </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="instruction.html#tm-section-2">Documentation-Recommend</a>
+                                          </li>
+                                          
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="instruction.html#tm-section-3">Documentation-Context</a>
+                                          </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="instruction.html#tm-section-4">Documentation-Main&App</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="data_resources.html">Advanced Service</a>
+                                        </li>
+                                      </ul>
+                                  </div>                            </li>
+  
+                              <li class="nav-item ">
+                                  <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>APP</a>
+                                  <div id="submenu-1" class="collapse submenu" style="">
+                                      <ul class="nav flex-column">
+                                          
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="basic-informations-tsp.html">Basic Informations</a>
+                                          </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="Credential.html">API Credential</a>
+                                          </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="performance_measurement.html">Users Management</a>
+                                          </li>
+                                          <li class="nav-item">
+                                            <a class="nav-link" href="products-update.html">Information Update</a>
+                                        </li>
+                                      </ul>
+                                  </div>
+                              </li>
+                              
+                              <li class="nav-item ">
+                                  <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>BANK</a>
+                                  <div id="submenu-4" class="collapse submenu" style="">
+                                      <ul class="nav flex-column">
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="basic-informations -bank.html">Basic Informations</a>
+                                          </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="analysis.html">Analysis</a>
+                                          </li>
+                                          <li class="nav-item">
+                                              <a class="nav-link" href="cards-offers-update.html">Credit Cards Update</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </li>
+                              
+                          </ul>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+          
+          <div class="dashboard-wrapper">
+              <div class="dashboard-ecommerce">
+                  <div class="container-fluid dashboard-content ">
+                      <!-- ============================================================== -->
+                      <!-- pageheader  -->
+                      <!-- ============================================================== -->
+                      <div class="row">
+                          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                              <div class="page-header">
+                                  <h2 class="pageheader-title">Users Management</h2>
+                                  <div class="page-breadcrumb">
+                                      <nav aria-label="breadcrumb">
+                                          <ol class="breadcrumb">
+                                              <li class="breadcrumb-item"><a href="basic-informations-tsp.html" class="breadcrumb-link">APP</a></li>
+                                              <li class="breadcrumb-item active" aria-current="page">Users Management</li>
+                                          </ol>
+                                      </nav>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <!-- ============================================================== -->
+                      <!-- end pageheader  -->
+                      <!-- ============================================================== -->
+                      <h3>TweetC.A.R.D. Effect</h3>
+                      <div class="ecommerce-widget">
+                        						
+                      <!--total customers-->
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                    <div class="card border-3 border-top border-top-primary">
+                                        <div class="card-body">
+                                            <h5 class="text-muted">本月已使用推薦數</h5>
+                                            <div class="metric-value d-inline-block">
+                                                <h1 class="mb-1">549</h1>
+                                            </div>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">7.02%</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </li>
-                                <li>
-                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
-                                </li>
-                            </ul>
-                        </li>
-                        
-                        </li>
-                        <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../dashboard/woman.png" alt="" class="user-avatar-md rounded-circle"></a>
-                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
-                                <div class="nav-user-info">
-                                    <h5 class="mb-0 text-white nav-user-name">Jennifer Chen</h5>
-                                    <span class="status"></span><span class="ml-2">Available</span>
                                 </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        
-        <div class="nav-left-sidebar sidebar-dark">
-            <div class="menu-list">
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav flex-column">
-                            <li class="nav-divider">
-                                Menu
-                            </li>
-
-                            <li class="nav-item ">
-                                <a class="nav-link" href="instruction.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fab fa-fw fa-wpforms"></i>Instructions</a>
-                                <div id="submenu-2" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="instruction.html#tm-section-1">Introduction</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="instruction.html#tm-section-2">Documentation-Recommend</a>
-                                        </li>
+                                <!-- ============================================================== -->
+                                <!-- end sales  -->
+                                <!-- ============================================================== -->
+                                <!-- ============================================================== -->
+                                <!-- new customer  -->
+                                <!-- ============================================================== -->
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                    <div class="card border-3 border-top border-top-primary">
+                                        <div class="card-body">
+                                            <h5 class="text-muted">本月已採用推薦數</h5>
+                                            <div class="metric-value d-inline-block">
+                                                <h1 class="mb-1">438</h1>
+                                            </div>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.4%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end new customer  -->
+                                <!-- ============================================================== -->
+                                <!-- ============================================================== -->
+                                <!-- visitor  -->
+                                <!-- ============================================================== -->
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                    <div class="card border-3 border-top border-top-primary">
+                                        <div class="card-body">
+                                            <h5 class="text-muted">本月使用者人數</h5>
+                                            <div class="metric-value d-inline-block">
+                                                <h1 class="mb-1">266</h1>
+                                            </div>
+                                            <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">1.48%</span>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ============================================================== -->
+                                <!-- end visitor  -->
+                                <!-- ============================================================== -->
+                                <!-- ============================================================== -->
+                                <!-- total orders  -->
+                                <!-- ============================================================== -->
+                                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                    <div class="card border-3 border-top border-top-primary">
+                                        <div class="card-body">
+                                            <h5 class="text-muted">習慣使用用戶數*</h5>
+                                            <div class="metric-value d-inline-block">
+                                                <h1 class="mb-1">257</h1>
+                                            </div>
+                                            <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5%</span>
+                                            </div>
                                         
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="instruction.html#tm-section-3">Documentation-Context</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="instruction.html#tm-section-4">Documentation-Main&App</a>
-                                        </li>
-                                    </ul>
-                                </div>                            </li>
-
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i>APP</a>
-                                <div id="submenu-1" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="basic-informations-tsp.html">Basic Informations</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Credential.html">API Credential</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="performance_measurement.html">Users Online Durations</a>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
                                 </div>
-                            </li>
-                            
-                            <li class="nav-item ">
-                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fab fa-fw fa-wpforms"></i>BANK</a>
-                                <div id="submenu-4" class="collapse submenu" style="">
-                                    <ul class="nav flex-column">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="basic-informations -bank.html">Basic Informations</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="analysis.html">Analysis</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="products-update.html">Credit Cards Update</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </nav>
-            </div>
-        </div>
-        
-        <div class="dashboard-wrapper">
-            <div class="container-fluid  dashboard-content">
-                
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="page-header">
-                            <h2 class="pageheader-title">Credit Cards Update</h2>
-                            <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
-                            <div class="page-breadcrumb">
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="basic-informations.html" class="breadcrumb-link">BANK</a></li>
-                                        <li class="breadcrumb-item active" aria-current="page">Credit Cards Update</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="page-section" id="notice">
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                            <h2>Notice!!</h2>        
-                            <ul class="list-unstyled arrow">
-                                <li>Upload your UPDATED credit card offers information on this page.Please upload the file that contains all the information.</li>
                                 
-                            </ul>
+                                </div>
+                             <!-- ============================================================== -->
+                            <!-- sales  -->
+                            <!-- ============================================================== -->
+                            
+                            <!-- ============================================================== -->
+                            <!-- end total orders  -->
+                            <!-- ============================================================== -->
                         </div>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                        <div class="card">
-                            <h5 class="card-header">Credit Cards Update 信用卡卡片優惠更新</h5>
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="custom-file mb-3">
-                                            <input type="file" class="custom-file-input" id="product_file" accept=".csv">
-                                            <label class="custom-file-label" for="prodct_file">Product info file (MUST BE IN CSV FORM!)</label>
-                                            <div id="file-upload-name"></div>
+                        <p>*習慣用戶為近三個月內連續使用推薦服務者</p>
+
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                              <div class="card">
+                                <h5 class="card-header">每月使用推薦數&每月使用人數變化圖</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo" onchange="ChangeData()">
+                                            <option value="both">每月使用推薦數&每月使用人數</option>
+                                            <option value="buyer">每月使用推薦數</option>
+                                            <option value="visitor">每月使用人數</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-sm-offset-1" id="filter">
+                                    </div>
+
+                                    <div class="card-body">
+                                      <canvas id="myChart" width="800" height="350"></canvas>
+                                    </div>
+
+                                </div>
+                            </div>
+                       
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">本月用戶卡片/優惠使用偏好</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo_time" onchange="ChangeData_time()">
+                                            <option value="total">信用卡</option>
+                                            <option value="week_one">消費類別</option>
+                                        </select>
+                                    </div>
+    
+                                    <div class="col-sm-offset-1" id="time_filter">
+                                        <h5 class="card-header" align="center">用戶卡片偏好</h5>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <canvas id="bar-chart" width="800" height="250"></canvas> 
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    
+                        
+                        <div class="dashboard-influence">
+                            <div class="container-fluid dashboard-content">
+                                <h3>Basic Management</h3>
+                                <div class="row">
+                                   
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                        <div class="card border-3 border-top border-top-primary">
+                                            <div class="card-body">
+                                                <h5 class="text-muted">APP用戶數</h5>
+                                                <div class="metric-value d-inline-block">
+                                                    <h1 class="mb-1">486</h1>
+                                                </div>
+                                                <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                    <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">2.10%</span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </form>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                        <div class="card border-3 border-top border-top-primary">
+                                            <div class="card-body">
+                                                <h5 class="text-muted">本月消費會員人數</h5>
+                                                <div class="metric-value d-inline-block">
+                                                    <h1 class="mb-1">126</h1>
+                                                </div>
+                                                <div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+                                                    <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">4%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                        <div class="card border-3 border-top border-top-primary">
+                                            <div class="card-body">
+                                                <h5 class="text-muted">有效會員*</h5>
+                                                <div class="metric-value d-inline-block">
+                                                    <h1 class="mb-1">427</h1>
+                                                </div>
+                                                <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                    <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">2.40%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- ============================================================== -->
+                                    <!-- end visitor  -->
+                                    <!-- ============================================================== -->
+                                    <!-- ============================================================== -->
+                                    <!-- total orders  -->
+                                    <!-- ============================================================== -->
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                        <div class="card border-3 border-top border-top-primary">
+                                            <div class="card-body">
+                                                <h5 class="text-muted">有效會員佔比</h5>
+                                                <div class="metric-value d-inline-block">
+                                                    <h1 class="mb-1">87.86%</h1>
+                                                </div>
+                                                <div class="metric-label d-inline-block float-right text-success font-weight-bold">
+                                                    <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">0.30%</span>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <p>*有效會員為近半年內至少消費過一次者</p>
+
+            			         <div class="row">
+            	                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+            	                            <div class="card">
+            	                                <h5 class="card-header">APP用戶性別比</h5>
+            	                                <div class="card-body">
+            	                                    <div id="gender_donut" style="height: 230px;"></div>
+            	                                </div>
+            	                                <div class="card-footer p-0 bg-white d-flex">
+            	                                    <div class="card-footer-item card-footer-item-bordered w-50">
+            	                                        <h2 class="mb-0"> 56% </h2>
+            	                                        <p>Female </p>
+            	                                    </div>
+            	                                    <div class="card-footer-item card-footer-item-bordered">
+            	                                        <h2 class="mb-0">46% </h2>
+            	                                        <p>Male </p>
+            	                                    </div>
+            	                                </div>
+            	                            </div>
+            	                        </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end followers by gender  -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- followers by age   -->
+	                        <!-- ============================================================== -->
+	                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+	                            <div class="card">
+	                                <h5 class="card-header">APP用戶年齡分布</h5>
+	                                <div class="card-body">
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">15 - 20</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 45%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">20 - 25</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 55%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">25 - 30</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">30 - 35</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 35%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">35 - 40</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 21%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">45 - 50</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 85%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                    <div class="mb-3">
+	                                        <div class="d-inline-block">
+	                                            <h4 class="mb-0">50 - 55</h4>
+	                                        </div>
+	                                        <div class="progress mt-2 float-right progress-md">
+	                                            <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+	                                        </div>
+	                                    </div>
+	                                </div>
+	                            </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">推薦採用率*</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo_1" onchange="ChangeData_1()">
+                                            <option value="week_CTR">週</option>
+                                            <option value="month_CTR">月</option>
+                                            <option value="year_CTR">年</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-offset-1" id="filter_1">
+                                    
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart_1" width="800" height="350"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">ROI表現</h5>
+                                        <div class="form-control">
+                                            <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                            <select id="ChangeInfo_3" onchange="ChangeData_3()">
+                                                <option value="week_ROI">週</option>
+                                                <option value="month_ROI">月</option>
+                                                <option value="year_ROI">年</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-offset-1" id="filter_3">
+                                        
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="myChart_3" width="800" height="350"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        <p>*推薦採用率為相同期間內APP用戶的 <B>總採用的推薦筆數/總使用推薦筆數</B></p>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">本月營收首購回購佔比</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo_location" onchange="ChangeData_location()">
+                                            <option value="ratio_r">營收</option>
+                                            <option value="ratio_p">人數</option>
+                                            <option value="ratio_t">交易筆數</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-offset-1" id="ratio_value"></div>
+                                    <div class="card-body">  <canvas id="canvasPie"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">消費會員人數</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo_2" onchange="ChangeData_2()">
+                                            <option value="week_CVR">週</option>
+                                            <option value="month_CVR">月</option>
+                                            <option value="year_CVR">年</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-offset-1" id="filter_2">
+                                            
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart_2" width="800" height="350"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Advance Mangement</h3>
+                        <div class="row">
+                                   
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">優惠券發放數量</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">408996</h1>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">兌換數量</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">200145</h1>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">兌換率</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">49%</h1>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="row">
-                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
-                        <button class="btn btn-primary" type="submit">Submit file</button>
-                    </div>
+                       
                 </div>
             </div>
+            </div>
+	                        <!-- ============================================================== -->
+	                        <!-- end followers by age   -->
+	                        <!-- ============================================================== -->
+	                        <!-- ============================================================== -->
+	                        <!-- followers by locations   -->
+	                        <!-- ============================================================== -->
 
-            <div class="footer">
+
+                       
+
+
+                    <div class="footer">
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -245,72 +670,468 @@
                     </div>
                 </div>
             </div>
-           
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
-    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
-    <script src="../assets/vendor/multi-select/js/jquery.multi-select.js"></script>
-    <script src="../assets/libs/js/main-js.js"></script>
-    <script>
-    $('#my-select, #pre-selected-options').multiSelect()
-    </script>
-    <script>
-    $('#callbacks').multiSelect({
-        afterSelect: function(values) {
-            alert("Select value: " + values);
+</div>
+    </div>
+   
+<script>
+
+      var both = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: '每月使用推薦筆數',
+        data: [223, 320, 578, 631, 290, 723, 499, 640, 710, 646, 513, 549],
+        backgroundColor: "rgba(89, 105, 255,0.5)",
+        borderColor: "rgba(89, 105, 255,0.7)",
+        borderWidth: 2
+      },
+      {
+        label: '每月使用人數',
+        data: [100, 262, 155, 345, 142, 263, 172, 110, 433, 336, 270, 266],
+        backgroundColor: "rgba(255, 64, 123,0.5)",
+        borderColor: "rgba(255, 64, 123,0.7)",
+        borderWidth: 2
+      }]};
+
+      var buyer = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "每月使用推薦筆數",
+        data: [223, 320, 578, 631, 290, 723, 499, 640, 710, 646, 513, 549],
+        backgroundColor:"rgba(89, 105, 255,0.5)",
+        borderColor:'rgba(89, 105, 255,0.7)',
+        borderWidth: 1
+    }]};
+
+      var visitor = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "每月使用人數",
+        data: [100, 262, 155, 345, 142, 263, 172, 110, 433, 336, 270, 266],
+        backgroundColor:'rgba(255, 64, 123,0.5)',
+        borderColor:'rgba(255, 64, 123,0.7)',
+        borderWidth: 1
+      }]};
+      var week_CVR = {
+        labels:['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+        datasets:[{
+        label: "消費會員人數",
+        data: [12, 19, 23, 23, 26, 23, 29],
+        backgroundColor:'rgba(255, 64, 123,0.4)',
+        borderColor:'rgba(255, 64, 123,1)',
+        borderWidth: 2
+    }]};
+
+      var month_CVR = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "消費會員人數",
+        data: [40, 58, 50, 50, 44, 66, 60, 74, 78, 80, 82, 84],
+        backgroundColor:'rgba(255, 64, 123,0.4)',
+        borderColor:'rgba(255, 64, 123,1)',
+        borderWidth: 2
+      }]};
+
+      var year_CVR = {
+        labels:[ '2017', '2018', '2019','2020'],
+        datasets:[{
+        label: "消費會員人數",
+        data: [342, 345, 450, 450],
+        backgroundColor:'rgba(255, 64, 123,0.4)',
+        borderColor:'rgba(255, 64, 123,1)',
+        borderWidth: 2
+      }]};
+      var ratio_r = {
+        labels:['首購','回購'],
+        datasets:[{
+        data: [13220,60128],
+        backgroundColor: [
+        "#aa66cc",
+        "#4285F4",
+        ],
+      }]};
+      var ratio_p = {
+        labels:['首購','回購'],
+        datasets:[{
+        data: [270,583],
+        backgroundColor: [
+        "#aa66cc",
+        "#4285F4",
+        ],
+      }]};
+      var ratio_t = {
+        labels:['首購','回購'],
+        datasets:[{
+        data: [270,646],
+        backgroundColor: [
+        "#aa66cc",
+        "#4285F4",
+        ],
+      }]};
+     
+      var week_CTR = {
+        labels:['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+        datasets:[{
+        label: "推薦採用率(%)",
+        data: [12, 19, 21, 22, 22, 32, 35],
+        backgroundColor:'rgba(89, 105, 255,0.4)',
+        borderColor:'rgba(89, 105, 255, 1)',
+        borderWidth: 2
+    }]};
+
+      var month_CTR = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "推薦採用率(%)",
+        data: [2, 13, 12, 12, 18, 20, 20, 21, 21, 22, 21, 25],
+        backgroundColor:'rgba(89, 105, 255,0.4)',
+        borderColor:'rgba(89, 105, 255, 1)',
+        borderWidth: 2
+      }]};
+
+      var year_CTR = {
+        labels:[ '2017', '2018', '2019','2020'],
+        datasets:[{
+        label: "推薦採用率(%)",
+        data: [32, 29, 35, 38],
+        backgroundColor:'rgba(89, 105, 255,0.4)',
+        borderColor:'rgba(89, 105, 255, 1)',
+        borderWidth: 2
+      }]};
+    
+var ctx = document.getElementById("myChart_1");
+var myChart_1 = new Chart(ctx, {
+    type: 'line',
+    data: week_CTR,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
         },
-        afterDeselect: function(values) {
-            alert("Deselect value: " + values);
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
         }
-    });
-    </script>
-    <script>
-    $('#keep-order').multiSelect({ keepOrder: true });
-    </script>
-    <script>
-    $('#public-methods').multiSelect();
-    $('#select-all').click(function() {
-        $('#public-methods').multiSelect('select_all');
-        return false;
-    });
-    $('#deselect-all').click(function() {
-        $('#public-methods').multiSelect('deselect_all');
-        return false;
-    });
-    $('#select-100').click(function() {
-        $('#public-methods').multiSelect('select', ['elem_0', 'elem_1'..., 'elem_99']);
-        return false;
-    });
-    $('#deselect-100').click(function() {
-        $('#public-methods').multiSelect('deselect', ['elem_0', 'elem_1'..., 'elem_99']);
-        return false;
-    });
-    $('#refresh').on('click', function() {
-        $('#public-methods').multiSelect('refresh');
-        return false;
-    });
-    $('#add-option').on('click', function() {
-        $('#public-methods').multiSelect('addOption', { value: 42, text: 'test 42', index: 0 });
-        return false;
-    });
-    </script>
-    <script>
-    $('#optgroup').multiSelect({ selectableOptgroup: true });
-    </script>
-    <script>
-    $('#disabled-attribute').multiSelect();
-    </script>
-    <script>
-    $('#custom-headers').multiSelect({
-        selectableHeader: "<div class='custom-header'>Selectable items</div>",
-        selectionHeader: "<div class='custom-header'>Selection items</div>",
-        selectableFooter: "<div class='custom-header'>Selectable footer</div>",
-        selectionFooter: "<div class='custom-header'>Selection footer</div>"
-    });
-    </script>
+    }
+});
+      function ChangeData_1(){
+  var getValue = document.getElementById("ChangeInfo_1").value;
+  if (getValue == 'week_CTR'){
+    myChart_1.data = week_CTR;
+    document.getElementById('filter_1').innerHTML= '';
+  }else if (getValue == 'month_CTR'){
+    myChart_1.data = month_CTR;
+    document.getElementById('filter_1').innerHTML= ''
+  }else if (getValue == 'year_CTR'){
+    myChart_1.data= year_CTR;
+    document.getElementById('filter_1').innerHTML= '';
+  }
+  myChart_1.update();
+}
+
+
+ var week_ROI = {
+        labels:['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+        datasets:[{
+        label: "ROI 表現(%)",
+        data: [12, 19, 33, 37, 36, 38, 39],
+        backgroundColor:'rgba(52, 116, 68,0.4)',
+        borderColor:'rgba(52, 116, 68,1)',
+        borderWidth: 2
+    }]};
+
+      var month_ROI = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "ROI 表現(%)",
+        data: [12, 19, 15, 15, 12, 13, 28, 29, 30, 35, 38, 38 ],
+        backgroundColor:'rgba(52, 116, 68,0.4)',
+        borderColor:'rgba(52, 116, 68,1)',
+        borderWidth: 2
+      }]};
+
+      var year_ROI = {
+        labels:[ '2017', '2018', '2019','2020'],
+        datasets:[{
+        label: "ROI 表現(%)",
+        data: [22, 29, 35, 37],
+        backgroundColor:'rgba(52, 116, 68,0.4)',
+        borderColor:'rgba(52, 116, 68,1)',
+        borderWidth: 2
+      }]};
+
+var ctx = document.getElementById("myChart_3");
+var myChart_3 = new Chart(ctx, {
+    type: 'line',
+    data: week_ROI,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        },
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
+        }
+    }
+}); 
+function ChangeData_3(){
+  var getValue = document.getElementById("ChangeInfo_3").value;
+  if (getValue == 'week_ROI'){
+    myChart_3.data = week_ROI;
+    document.getElementById('filter_3').innerHTML= '';
+  }else if (getValue == 'month_ROI'){
+    myChart_3.data = month_ROI;
+    document.getElementById('filter_3').innerHTML= ''
+  }else if (getValue == 'year_ROI'){
+    myChart_3.data= year_ROI;
+    document.getElementById('filter_3').innerHTML= '';
+  }
+  myChart_3.update();
+}
+    
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: both,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        },
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
+        }
+    }
+});
+var ctx = document.getElementById("myChart_2");
+var myChart_2 = new Chart(ctx, {
+    type: 'line',
+    data: week_CVR,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        },
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
+        }
+    }
+});
+var ctx = document.getElementById('canvasPie');
+var pieChart = new Chart(ctx, {
+    type: 'pie',
+    data : ratio_r,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        }
+    }
+});
+
+var total = {
+        labels:["A卡片", "E卡片", "C卡片", "B卡片", "D卡片"],
+          datasets: [{
+          label: "用戶卡片偏好",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [526,247,173,108,73]
+        }
+      ]};
+
+var week_one = {
+        labels:["現金回饋", "停車", "電影", "紅利回饋", "加油"],
+          datasets: [{
+          label: "用戶優惠偏好",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [940,526,334,184,113]
+        }
+      ]};
+
+
+var bar_category = new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: total,
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        // text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+
+
+
+function ChangeData(){
+  var getValue = document.getElementById("ChangeInfo").value;
+  if (getValue == 'both'){
+    myChart.data = both;
+    document.getElementById('filter').innerHTML= '';
+  }else if (getValue == 'buyer'){
+    myChart.data = buyer;
+    document.getElementById('filter').innerHTML= ''
+  }else if (getValue == 'visitor'){
+    myChart.data= visitor;
+    document.getElementById('filter').innerHTML= '';
+  }
+  myChart.update();
+}
+function ChangeData_2(){
+  var getValue = document.getElementById("ChangeInfo_2").value;
+  if (getValue == 'week_CVR'){
+    myChart_2.data = week_CVR;
+    document.getElementById('filter_2').innerHTML= '';
+  }else if (getValue == 'month_CVR'){
+    myChart_2.data = month_CVR;
+    document.getElementById('filter_2').innerHTML= ''
+  }else if (getValue == 'year_CVR'){
+    myChart_2.data= year_CVR;
+    document.getElementById('filter_2').innerHTML= '';
+  }
+  myChart_2.update();
+}
+function ChangeData_location(){
+var getValue = document.getElementById("ChangeInfo_location").value;
+if (getValue == 'ratio_r'){
+  pieChart.data =ratio_r;
+  document.getElementById('ratio_value').innerHTML= '';
+  }else if (getValue == 'ratio_p'){
+    pieChart.data =ratio_p;
+    document.getElementById('ratio_value').innerHTML= '';
+  }else if (getValue=='ratio_t'){
+    pieChart.data =ratio_t;
+    document.getElementById('ratio_value').innerHTML= '';
+}
+pieChart.update();
+};
+
+function ChangeData_time(){
+  var getValue = document.getElementById("ChangeInfo_time").value;
+  if (getValue == 'total'){
+    bar_category.data = total;
+    document.getElementById('time_filter').innerHTML= '<h5 class="card-header" align="center">用戶卡片偏好</h5>';
+  }else if (getValue == 'week_one'){
+    bar_category.data = week_one;
+    document.getElementById('time_filter').innerHTML= '<h5 class="card-header" align="center">用戶優惠偏好</h5>';
+  }
+  bar_category.update();
+}
+
+
+
+
+</script>
+
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="../assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="../assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="../assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="../assets/vendor/charts/morris-bundle/morris.js"></script>
+	<script src="../assets/vendor/charts/morris-bundle/morrisjs.html"></script>
+
+	
+	<script src="../assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
+	<script src="../assets/vendor/charts/charts-bundle/chartjs.js"></script>
+
+    <!-- chart c3 js -->
+    <script src="../assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="../assets/libs/js/dashboard-ecommerce.js"></script>
+    <script src="../assets/libs/js/dashboard-influencer.js"></script>
+
+	
 </body>
  
 </html>

@@ -5,7 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Basic Informations</title>
+    <title>Data Sources</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
@@ -185,146 +185,125 @@
             </div>
         </div>
             
-            <div class="dashboard-wrapper">
-                <div class="container-fluid dashboard-content">
+        <div class="dashboard-wrapper">
+            <div class="container-fluid dashboard-content">
+                <div class="dashboard-forms ">
+                    <!-- ============================================================== -->
+                    <!-- pageheader  -->
+                    <!-- ============================================================== -->
                     <div class="row">
-                        <div class="col-xl-10">
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="page-header" id="top">
-                                        <h2 class="pageheader-title">Basic Informations</h2>
-                                        <div class="page-breadcrumb">
-                                            <nav aria-label="breadcrumb">
-                                                <ol class="breadcrumb">
-                                                    <li class="breadcrumb-item"><a href="basic-informations-tsp.html" class="breadcrumb-link">APP</a></li>
-                                                    <li class="breadcrumb-item active" aria-current="page">Basic Informations</li>
-                                                </ol>
-                                            </nav>
-                                        </div>
-                                    </div>
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="page-header" id="top">
+                                <h2 class="pageheader-title">Data Sources</h2>
+                                <p class="pageheader-text">Proin placerat ante duiullam scelerisque a velit ac porta, fusce sit amet vestibulum mi. Morbi lobortis pulvinar quam.</p>
+                                <div class="page-breadcrumb">
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="basic-informations.html" class="breadcrumb-link">Firm Management</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Functions Coordinate</li>
+                                        </ol>
+                                    </nav>
                                 </div>
                             </div>
-                            
-                            
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <p>-Manage your firm detail informations on this page!</p>        
+                        </div>
+                    </div>
+                    <!-- ============================================================== -->
+                    <!-- end pageheader  -->
+                    <!-- ============================================================== -->
+
+
+                    <div class="row">    
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">Management Dashboard Pages:</h5>
+                                <div class="card-body border-top">
+                                    <h4>Choose the Management Dashboard Pages you are favorable.</h4>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-secondar btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Choose the type of shopping-record
+                                        </button>
+                                        <div class="dropdown-menu">
+                                          <a class="dropdown-item" href="#">Action</a>
+                                          <a class="dropdown-item" href="#">Another action</a>
+                                          <a class="dropdown-item" href="#">Something else here</a>
+                                          <div class="dropdown-divider"></div>
+                                          <a class="dropdown-item" href="#">Separated link</a>
+                                        </div>
+                                      </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customer_management_page" required>
+                                            <label class="custom-control-label" for="customer_management_page">"Customer Management" Page</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="sales_management_page" required>
+                                            <label class="custom-control-label" for="sales_management_page">"Sales Management" Page</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="recommendation_analysis_page" required>
+                                            <label class="custom-control-label" for="recommendation_analysis_page">
+                                            "Recommendation Analysis" Page</label>
+                                        </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="section-block" id="firmdetail">
-                                        <h3 class="section-title">Firm Detail</h3>
-                                    </div>
-                                    <div class="card">
-                                        <h5 class="card-header">Basic Firm Informations</h5>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="inputText3" class="col-form-label">Firm Name</label>
-                                                    <input id="inputText3" type="text" class="form-control">
-                                                </div>
-                                                <div class="form-group">
-                                                    <label for="inputEmail">Email address</label>
-                                                    <input id="inputEmail" type="email" placeholder="name@email.com" class="form-control">
-                                                </div>
-                                            
-                                            </form>
+
+                    <div class="row">    
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <h5 class="card-header">Recommendation Parameters:</h5>
+                                <div class="card-body border-top">
+                                    <h4>Choose the parameters you are favorable.</h4>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="position" required>
+                                            <label class="custom-control-label" for="position">Current Position [當下位置]</label>
                                         </div>
-                                    </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                            <label class="custom-control-label" for="weather">Current Weather [當下天氣]</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                            <label class="custom-control-label" for="time">Current Time [當下時間]</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="activity" required>
+                                            <label class="custom-control-label" for="activity">Current Doing Activities [當下進行活動]</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="phone-habit" required>
+                                            <label class="custom-control-label" for="phone-habit">Personal Phone Using Habit [手機使用習慣]</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="phone-temporary-text" required>
+                                            <label class="custom-control-label" for="phone-temporary-text">Cookie [手機暫存文本抓取]</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="app-history" required>
+                                            <label class="custom-control-label" for="app-history">APP History Browsing Record [APP歷史瀏覽紀錄]</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="shopping-record" required>
+                                            <label class="custom-control-label" for="shopping-record">Actual Shopping Record Import [實際購物紀錄導入]</label>
+                                        </div>
                                 </div>
                             </div>
-                        
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        </div>
+                    </div>   
 
-                                    <div class="card">
-                                        <h5 class="card-header" id="firmtype">Firm Type</h5>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="input-select">Select Firm Type</label>
-                                                    <select class="form-control" id="input-select">
-                                                        <option>Choose Type</option>
-                                                        <option value="clothing">Clothing</option>
-                                                        <option value="food">Food</option>
-                                                        <option value="shopping">Shopping</option>
-                                                        <option value="E-Commerce">E-Commerce</option>
-                                                    </select>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="function_coordination">
+                            <button class="btn btn-primary" type="submit">Submit</button>     
+                        </div>
+                    </div> 
 
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <div class="section-block" id="program-choosing">
-                                        <h3 class="section-title">Plan Paid</h3>
-                                        <p>Please choose your preferrable plan.</p>
-                                    </div>
-                                </div>
+                </div>
+            </div>
 
-                                <div class="col-xl-6 col-lg-6 col-md-126 col-sm-12 col-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="plan1">
-                                                <label class="custom-control-label" for="plan1">業者體驗方案</label>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="plan1-text">
-                                                <b>免費使用</b>
-                                                <br>
-                                                推薦筆數：300筆推薦結果/天
-                                                <br>
-                                                信用卡優惠種類:一種
-                                                <br>
-                                                更新頻率：每周一次
-                                                <br>
-                                                產品支援：平日上班時段
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-6 col-lg-6 col-md-126 col-sm-12 col-12">
-                                    <div class="card">
-                                        <div class="card-header">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="plan2">
-                                                <label class="custom-control-label" for="plan2">業者企業方案</label>
-                                            </div>
-                                        </div>
-                                        <div class="card-body">
-                                            <p class="plan2-text">
-                                                推薦筆數：依需求提供
-                                                <br>
-                                                信用卡優惠種類:二~四種
-                                                <br>
-                                                更新頻率：每天一次
-                                                <br>
-                                                產品支援：平日上班時段
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                               
-
-                            </div>
-
-
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="firm_detail">
-                                    <ul class="list-unstyled arrow">
-                                        <li>Remember to check all your inputs once again!</li>
-                                    </ul>
-                                    <button class="btn btn-primary" type="submit">Submit</button>
-                                </div>
+                   
+        </div>
+                          
                             </div>
                         </div>
                     </div>

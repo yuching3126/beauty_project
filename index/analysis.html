@@ -1,23 +1,42 @@
-
-
-
-
 <!doctype html>
 <html lang="en">
  
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+
+<!--{% load static %}-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+       
+
+        <!-- PrismJS: Syntax Highlighting -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/themes/prism.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.13.0/plugins/normalize-whitespace/prism-normalize-whitespace.js"></script>
+
+        <!-- Font Awesome >
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/solid.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/fontawesome.css"-->
+
+        <!-- Mustard UI -->
+        <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" language="JavaScript"></script> -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Analysis</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
     <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/libs/css/style.css">
     <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="../assets/vendor/datepicker/tempusdominus-bootstrap-4.css" />
-    <link rel="stylesheet" href="../assets/vendor/inputmask/css/inputmask.css" />
+    <link rel="stylesheet" href="../assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <title>Analysis</title>
+
 </head>
+
 <body>
     <!-- ============================================================== -->
     <!-- main wrapper -->
@@ -104,6 +123,7 @@
                 </div>
             </nav>
         </div>
+    </div>
 
         <div class="nav-left-sidebar sidebar-dark">
             <div class="menu-list">
@@ -118,11 +138,14 @@
                                     Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link" href="instruction.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fab fa-fw fa-wpforms"></i>Instructions</a>
+                                <a class="nav-link" href="instruction.html" data-toggle="collapse" aria-expanded="false" data-target="#submenu-2" aria-controls="submenu-2"><i class="fab fa-fw fa-wpforms"></i>Installation</a>
                                 <div id="submenu-2" class="collapse submenu" style="">
                                     <ul class="nav flex-column">
                                         <li class="nav-item">
                                             <a class="nav-link" href="instruction.html#tm-section-1">Introduction</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="instruction.html#tm-section-5">Getting Started</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="instruction.html#tm-section-2">Documentation-Recommend</a>
@@ -133,6 +156,9 @@
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" href="instruction.html#tm-section-4">Documentation-Main&App</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="data_resources.html">Advanced Service</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -150,7 +176,10 @@
                                             <a class="nav-link" href="Credential.html">API Credential</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="performance_measurement.html">Users Online Durations</a>
+                                            <a class="nav-link" href="performance_measurement.html">Users Management</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="products-update.html">Information Update</a>
                                         </li>
                                         
                                     </ul>
@@ -168,9 +197,8 @@
                                             <a class="nav-link" href="analysis.html">Analysis</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="products-update.html">Credit Cards Update</a>
+                                            <a class="nav-link" href="cards-offers-update.html">Credit Cards Update</a>
                                         </li>
-                                        
                                     </ul>
                                 </div>
                             </li>
@@ -182,7 +210,9 @@
         </div>
             
             <div class="dashboard-wrapper">
-                <div class="container-fluid dashboard-content">
+                <div class="dashboard-influence">
+                    <div class="container-fluid dashboard-content"> 
+
                     <div class="row">
                         <div class="col-xl-10">
                             <div class="row">
@@ -200,98 +230,267 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
                             
-            
-           
-                            
+                              
+                                
+                                <div class="ecommerce-widget">       
+                                    
+                                               
+           <!--推薦使用率排名表格-->
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                    <h3>Your API Key</h3>
+                                    <h4>Ratio Rank</h4>
+                                    
                                     <div class="card">
-                                        <h5 class="card-header">Popular Brands</h5>
+                                        <h5 class="card-header">推薦使用率</h5>
                                         <div class="card-body p-0">
                                         <div class="table-responsive">
                                         <table class="table">
                                         <thead class="bg-light">
                                         <tr class="border-0">
-                                        <th class="border-0">#</th>
-                                        <th class="border-0">Image</th>
-                                        <th class="border-0">Brand Name</th>
-                                        <th class="border-0">Transaction Amount</th>
-                                        <th class="border-0">Quantity</th>
-                                        <th class="border-0">Total Amount</th>
-                                        <th class="border-0">Order Time</th>
-                                        <th class="border-0">Customer</th>
-                                        <th class="border-0">Status</th>
+                                        <th class="border-0">信用卡名稱</th>
+                                        <th class="border-0">信用卡編號</th>
+                                        <th class="border-0">辦卡推薦使用率</th>
+                                        <th class="border-0">辦卡推薦使用率排名</th>
+                                        <th class="border-0">辦卡推薦使用率平均出現名次</th>
+                                        <th class="border-0">用卡推薦使用率</th>
+                                        <th class="border-0">用卡推薦使用率排名</th>
+                                        <th class="border-0">用卡推薦使用率平均出現名次</th>
+                                        <th class="border-0">辦卡推薦使用率變化量</th>
+                                        <th class="border-0">用卡推薦使用率變化量</th>
                                        </tr>
                                        </thead>
                                        <tbody>
                                        <tr>
                                         <td>1</td>
                                         <td>
-    <div class="m-r-10"><img src="assets/images/Starbucks.png" alt="user" class="rounded" width="45"></div>
-    </td>
-    <td>Starbucks </td>
-    <td>20,127 </td>
-    <td>20</td>
-    <td>$80,000.00</td>
-    <td>27-08-2018 01:22:12</td>
-    <td>Patricia J. King </td>
-    <td><span class="badge-dot badge-brand mr-1"></span>Cooperated </td>
-    </tr>
-    <tr>
-    <td>2</td>
-    <td>
-    <div class="m-r-10"><img src="assets/images/linepay.png" alt="user" class="rounded" width="45"></div>
-    </td>
-    <td>Line Pay </td>
-    <td>14,363</td>
-    <td>12</td>
-    <td>$1800,000.00</td>
-    <td>25-08-2018 21:12:56</td>
-    <td>Rachel J. Wicker </td>
-    <td><span class="badge-dot badge-success mr-1"></span>Not Cooperated </td>
-    </tr>
-    <tr>
-    <td>3</td>
-    <td>
-    <div class="m-r-10"><img src="assets/images/dudu.png" alt="user" class="rounded" width="45"></div>
-    </td>
-    <td>DoDoHome </td>
-    <td>12,899</td>
-    <td>23</td>
-    <td>$82,000.00</td>
-    <td>24-08-2018 14:12:77</td>
-    <td>Michael K. Ledford </td>
-    <td><span class="badge-dot badge-success mr-1"></span>Not Cooperated </td>
-    </tr>
-    <tr>
-    <td>4</td>
-    <td>
-    <div class="m-r-10"><img src="assets/images/uber-eat.jpg" alt="user" class="rounded" width="45"></div>
-    </td>
-    <td>Uber Eat </td>
-    <td>10,115</td>
-    <td>34</td>
-    <td>$340,000.00</td>
-    <td>23-08-2018 09:12:35</td>
-    <td>Michael K. Ledford </td>
-    <td><span class="badge-dot badge-success mr-1"></span>Not Cooperated </td>
-    </tr>
-    <tr>
-    <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
-    </tr>
-    </tbody>
-    </table>
-    </div>
-    </div>
-</div>
-</div>        
+                                             <div class="m-r-10"><img src="assets/images/Starbucks.png" alt="user" class="rounded" width="45"></div>
+                                            </td>
+                                            <td>Starbucks </td>
+                                            <td>$80,000.00</td>
+                                            <td>20,127 </td>
+                                            <td>20</td>
+                                            <td>50%</td>
+                                            <td>50%</td>    
+                                         </tr>
+                                         <tr>
+                                             <td>2</td>
+                                             <td>
+                                                 <div class="m-r-10"><img src="assets/images/linepay.png" alt="user" class="rounded" width="45"></div>
+                                                </td>
+                                                <td>Line Pay </td>
+                                                <td>$1800,000.00</td>
+                                                <td>14,363</td>
+                                                <td>12</td>
+                                                <td>30%</td>
+                                                <td>70%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>
+                                                    <div class="m-r-10"><img src="assets/images/dudu.png" alt="user" class="rounded" width="45"></div>
+                                                </td>
+                                                <td>DoDoHome </td>
+                                                <td>$82,000.00</td>
+                                                <td>12,899</td>
+                                                <td>23</td>
+                                                <td>27%</td>
+                                                <td>73% </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>
+                                                    <div class="m-r-10"><img src="assets/images/uber-eat.jpg" alt="user" class="rounded" width="45"></div>
+                                                </td>
+                                                <td>Uber Eat </td>
+                                                <td>$340,000.00</td>
+                                                <td>10,115</td>
+                                                <td>34</td>
+                                                <td>20%</td>
+                                                <td>80%</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>
+                                                    <div class="m-r-10"><img src="assets/images/uber-eat.jpg" alt="user" class="rounded" width="45"></div>
+                                                </td>
+                                                <td>Uber Eat </td>
+                                                <td>$340,000.00</td>
+                                                <td>10,115</td>
+                                                <td>34</td>
+                                                <td>20%</td>
+                                                <td>80%</td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
+                        </div>
+                    </div>        
+                                 
+                    
+                                    <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+                                    
+                                        
+                                        <div class="card">
+                                            <h5 class="card-header">常去地點</h5>
+                                            <div class="card-body p-0">
+                                            <div class="table-responsive">
+                                            <table class="table">
+                                            <thead class="bg-light">
+                                            <tr class="border-0">
+                                            <th class="border-0">排名</th>
+                                            <th class="border-0">LOGO</th>
+                                            <th class="border-0">消費地點</th>
+                                            <th class="border-0">總金額</th>
+                                            <th class="border-0">消費筆數</th>
+                                            <th class="border-0">消費用戶人數</th>
+                                            <th class="border-0">市佔率</th>
+                                            <th class="border-0">潛在客群</th>
+                                           </tr>
+                                           </thead>
+                                           <tbody>
+                                           <tr>
+                                            <td>1</td>
+                                            <td>
+        <div class="m-r-10"><img src="assets/images/Starbucks.png" alt="user" class="rounded" width="45"></div>
+        </td>
+        <td>Starbucks </td>
+        <td>$80,000.00</td>
+        <td>20,127 </td>
+        <td>20</td>
+        <td>50%</td>
+        <td>50%</td>    
+        </tr>
+        <tr>
+        <td>2</td>
+        <td>
+        <div class="m-r-10"><img src="assets/images/linepay.png" alt="user" class="rounded" width="45"></div>
+        </td>
+        <td>Line Pay </td>
+        <td>$1800,000.00</td>
+        <td>14,363</td>
+        <td>12</td>
+        <td>30%</td>
+        <td>70%</td>
+        </tr>
+        <tr>
+        <td>3</td>
+        <td>
+        <div class="m-r-10"><img src="assets/images/dudu.png" alt="user" class="rounded" width="45"></div>
+        </td>
+        <td>DoDoHome </td>
+        <td>$82,000.00</td>
+        <td>12,899</td>
+        <td>23</td>
+        <td>27%</td>
+        <td>73% </td>
+        </tr>
+        <tr>
+        <td>4</td>
+        <td>
+        <div class="m-r-10"><img src="assets/images/uber-eat.jpg" alt="user" class="rounded" width="45"></div>
+        </td>
+        <td>Uber Eat </td>
+        <td>$340,000.00</td>
+        <td>10,115</td>
+        <td>34</td>
+        <td>20%</td>
+        <td>80%</td>
+        </tr>
+        <tr>
+        <td>5</td>
+        <td>
+        <div class="m-r-10"><img src="assets/images/uber-eat.jpg" alt="user" class="rounded" width="45"></div>
+        </td>
+        <td>Uber Eat </td>
+        <td>$340,000.00</td>
+        <td>10,115</td>
+        <td>34</td>
+        <td>20%</td>
+        <td>80%</td>
+        </tr>
+        <tr>
+        <td colspan="9"><a href="#" class="btn btn-outline-light float-right">View Details</a></td>
+        </tr>
+        </tbody>
+        </table>
+        <p>**Market Shares is to show how many transactions are from your credit cards among all the transactions at the place. <br/>
+            **Potential Customers is calculated from 1-Market Share</p>
+        </div>
+        </div>
+    </div>
+    </div> 
+    
+    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
+        <div class="card">
+            <h5 class="card-header"> 優惠種類使用佔比(全部用戶)</h5>
+            <div class="card-body">  <canvas id="canvasPie-2" width="20" height="45"></canvas>
+        </div>
+        </div>
+        </div>
+        </div>
+                            
+                                <div class="container-fluid dashboard-content">
+                                    <div class="row">
+                                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">推薦使用率長期走向</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo_2" onchange="ChangeData_2()">
+                                            <option value="week_CVR">WEEK</option>
+                                            <option value="month_CVR">MONTH</option>
+                                            <option value="year_CVR">YEAR</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-offset-1" id="filter_2">
+                                            
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart_2" width="800" height="350"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">TA篩選</h5>
+                                    <div class="col-sm-offset-1" id="ratio_value"></div>
+                                    <div class="card-body"> 
+                                         <canvas id="canvasPie"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                                    
+                                        
+                                         
+                                <h4>堆疊長條圖</h4>
+                                <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card">
+                                        <h5 class="card-header">Best Selling Product Category</h5>
+                                            <div class="card-body">
+                                        <!--<div class="container text-center my-4">-->
 
-
-                            <iframe width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiYTMxYTQxNGUtZDQzNi00YzViLThjOWUtZjcxZTc3ZmEzMWE1IiwidCI6IjBhZDE3ZGQ4LWIwMzUtNDM2OC1iNDJlLWZiMGQyZGQwZjJjNSIsImMiOjEwfQ%3D%3D" frameborder="0" allowFullScreen="true"></iframe>            
+                                        <canvas id="bar-Chart" width="800" height="300"></canvas>
+                                    
+                                      </div>
+                                    </div>
+                                    
+                                </div>
+        
+                            
+                            </div>
+                            </div>
+                        
+                    </div>
+            
                 <div class="footer">
                     <div class="container-fluid">
                         <div class="row">
@@ -306,15 +505,187 @@
                         </div>
                     </div>
                 </div>
-
         </div>
-    </div>
-        <!-- Optional JavaScript -->
-    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+        
+    
+
+    <script>
+var ctxB = document.getElementById("bar-Chart").getContext('2d');
+    var myBarChart = new Chart(ctxB, {
+      type: 'bar',
+      data: {
+        labels: ["Option1", "Option2", "Option3", "Option4", "Option5", "Option6"],
+        datasets: [{
+          label: 'Dataset 1',
+          backgroundColor: '#2BBBAD',
+          data: [12, 29, 4, 9, 21, 13]
+        }, {
+          label: 'Dataset 2',
+          backgroundColor: '#4285F4',
+          data: [22, 33, 6, 15, 12, 3]
+        }, {
+          label: 'Dataset 3',
+          backgroundColor: '#aa66cc',
+          data: [12, 19, 3, 5, 2, 3]
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Bar Chart - Stacked'
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: false
+        },
+        responsive: true,
+        scales: {
+          xAxes: [{
+            stacked: true,
+          }],
+          yAxes: [{
+            stacked: true
+          }]
+        }
+      }
+    });
+
+        
+    var week_CVR = {
+        labels:['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        datasets:[{
+        label: "CVR rate",
+        data: [12, 19, 23, 23, 26, 23, 29],
+        backgroundColor:'rgba(89, 105, 255,0.4)',
+        borderColor:'rgba(89, 105, 255, 1)',
+        borderWidth: 2
+    }]};
+
+      var month_CVR = {
+        labels:['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        datasets:[{
+        label: "CVR rate",
+        data: [20, 29, 25, 25, 22, 33, 30, 37, 39, 40, 41, 42],
+        backgroundColor:'rgba(89, 105, 255,0.4)',
+        borderColor:'rgba(89, 105, 255, 1)',
+        borderWidth: 2
+      }]};
+
+      var year_CVR = {
+        labels:['2016', '2017', '2018', '2019'],
+        datasets:[{
+        label: "CVR rate",
+        data: [42, 45, 50, 50],
+        backgroundColor:'rgba(255, 64, 123,0.4)',
+        borderColor:'rgba(255, 64, 123,1)',
+        borderWidth: 2
+      }]};
+      var ratio = {
+        labels:['Songshang','Xinyi','Xizhi','Zhongshan', 'Banqiao', 'Others'],
+        datasets:[{
+        data: [0.43,0.21,0.17,0.13,0.02,0.04],
+        backgroundColor: [
+        "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#DECF57",
+        ],
+      }]};
+
+      var value = {
+        labels:['Songshang','Xinyi','Xizhi','Zhongshan', 'Banqiao', 'Others'],
+        datasets:[{
+        data: [43,21,17,13,2,4],
+        backgroundColor: [
+        "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#DECF57",
+        ],
+      }]};
+
+var ctx = document.getElementById("myChart_2");
+var myChart_2 = new Chart(ctx, {
+    type: 'line',
+    data: week_CVR,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        },
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
+        }
+    }
+});
+var ctx = document.getElementById('canvasPie');
+var pieChart = new Chart(ctx, {
+    type: 'bar',
+    data : value,
+});
+var ctx = document.getElementById('canvasPie-2');
+var pieChart = new Chart(ctx, {
+    type: 'pie',
+    data : ratio,
+});
+function ChangeData_2(){
+  var getValue = document.getElementById("ChangeInfo_2").value;
+  if (getValue == 'week_CVR'){
+    myChart_2.data = week_CVR;
+    document.getElementById('filter_2').innerHTML= '';
+  }else if (getValue == 'month_CVR'){
+    myChart_2.data = month_CVR;
+    document.getElementById('filter_2').innerHTML= ''
+  }else if (getValue == 'year_CVR'){
+    myChart_2.data= year_CVR;
+    document.getElementById('filter_2').innerHTML= '';
+  }
+  myChart_2.update();
+}
+
+
+</script>
+<script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
     <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
     <script src="../assets/libs/js/main-js.js"></script>
-    <script src="../assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
+    <!-- chart chartist js -->
+    <script src="../assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="../assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="../assets/vendor/charts/morris-bundle/morris.js"></script>
+	<script src="../assets/vendor/charts/morris-bundle/morrisjs.html"></script>
+
+	
+	<script src="../assets/vendor/charts/charts-bundle/Chart.bundle.js"></script>
+	<script src="../assets/vendor/charts/charts-bundle/chartjs.js"></script>
+
+    <!-- chart c3 js -->
+    <script src="../assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="../assets/libs/js/dashboard-ecommerce.js"></script>
+    <script src="../assets/libs/js/dashboard-influencer.js"></script>
+
+
     <script>
     $(function(e) {
         "use strict";
