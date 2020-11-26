@@ -133,9 +133,7 @@
                                         <li class="nav-item">
                                             <a class="nav-link" href="instruction.html#tm-section-4">Documentation-Main&App</a>
                                         </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="data_resources.html">Advanced Service</a>
-                                        </li>
+                                        
                                     </ul>
                                 </div>                           
                              </li>
@@ -237,28 +235,6 @@
                                 </div>
                             </div>
                         
-                            <div class="row">
-                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-
-                                    <div class="card">
-                                        <h5 class="card-header" id="firmtype">Firm Type</h5>
-                                        <div class="card-body">
-                                            <form>
-                                                <div class="form-group">
-                                                    <label for="input-select">Select Firm Type</label>
-                                                    <select class="form-control" id="input-select">
-                                                        <option>Choose Type</option>
-                                                        <option value="clothing">Clothing</option>
-                                                        <option value="food">Food</option>
-                                                        <option value="shopping">Shopping</option>
-                                                        <option value="E-Commerce">E-Commerce</option>
-                                                    </select>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="row">
                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
@@ -313,6 +289,237 @@
                                 </div>
                                 
                             </div>
+                            <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="section-block" id="program-choosing">
+                                        <h3 class="section-title">Advanced Service</h3>
+                                    </div>
+                                </div>
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card">
+                                        <h5 class="card-header">Analysis Graphs:</h5>
+                                        <div class="card-body border-top">
+                                            <h4>Please choose the analysis graphs that you are favorable.</h4>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="Card Analysis & RecommemDation" required>
+                                                <label class="custom-control-label" for="Card Analysis & RecommemDation">Card Analysis & RecommemDation</label>
+                                                <p><b>1. 銀行及已勾選信用卡的辦卡推薦率</b>[表格] 
+                                            <br/><b>2. 銀行及已勾選信用卡的用卡推薦率</b>[表格,折線圖]<br/>
+                                            &emsp;更進一步提供用卡推薦使用率長期走向以週、月、年為單位觀察比較其變化。
+                                                <br/>
+                                                上述資料來自於API的推薦結果。不但可以了解使用推薦系統的觸及程度，也可以當作本身在市場上的競爭力的參考。</P>
+                                                </div>
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="Users Shopping Habits & Preference" required>
+                                                <label class="custom-control-label" for="Users Shopping Habits & Preference">Users Shopping Habits & Preference</label>
+                                                <p><b>1. 全體用戶常去的消費地點</b>[表格,圓餅圖]<br/>
+                                                 &emsp;提供用戶常去地點排名&用戶常去地點佔比。
+                                                 於表格內提供消費地點、消費筆數、總金額、消費用戶人數、市佔率(API取得交易紀錄中 [該銀行卡片在此地交易數/在此地交易數] )、潛在客群(1-市佔率)。名次依照消費筆數排序出前五名。 
+                                                 <br/><b>2. 尋找客群</b>[長條圖]<br/>
+                                                    &emsp;提供特定用戶常去的消費地點。銀行可依照目標客群特質篩選(性別、年齡、月消費金額)，了解特定客群常去地點以作為未來合作對象參考。<br/>
+                                                <b>3. 用戶信用卡使用偏好</b>[堆疊長條圖]<br/>
+                                                    &emsp;針對自家銀行選擇的各張信用卡分析消費種類的百分占比。<br/>
+                                                    上述資料來自於多個APP使用者。將各家銀行的資料加以整理分析並在保護個資的前提下提供給銀行，可讓單一銀行能用更宏觀的角度了解消費者的偏好。
+                                                        </P>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">    
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <h4>Data Source:</h4>
+                                    <h6>Choose types of shopping record to analysis.</h6>
+                                    <div class="card">
+                                        
+                                        
+                                            <div class="abgne_tab">
+                                                <ul class="nav nav-tabs">
+                                                    <li class="nav-item"><a class="nav-link" href="#tab1">Food & Drinks</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#tab2">Vehicle</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#tab3">Health & Life</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#tab4">Movies & Music</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#tab5">Eduacation</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#tab6">Shopping Malls</a></li>
+                                                    <li class="nav-item"><a class="nav-link" href="#tab7">Wearings</a></li>
+                                                </ul>
+                                                
+                                                <div class="card-body border-top">
+                                                <div class="tab_container">
+                                                    <div id="tab1" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="position" required>
+                                                            <label class="custom-control-label" for="position">星巴克</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                                            <label class="custom-control-label" for="weather">Food Panda</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">Uber Eats</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="mos" required>
+                                                            <label class="custom-control-label" for="mos">摩斯漢堡</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="milkshop" required>
+                                                            <label class="custom-control-label" for="milkshop">迷克夏</label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab2" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="machi" required>
+                                                            <label class="custom-control-label" for="machi">車麻吉</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="phone-habit" required>
+                                                            <label class="custom-control-label" for="phone-habit">ezETC</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="phone-temporary-text" required>
+                                                            <label class="custom-control-label" for="phone-temporary-text">uTag車主專屬</label>
+                                                        </div>  
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="app-history" required>
+                                                            <label class="custom-control-label" for="app-history">台灣停車</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="shopping-record" required>
+                                                            <label class="custom-control-label" for="shopping-record">俥庫iParking</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="parkpay" required>
+                                                            <label class="custom-control-label" for="parkpay">ParkPay</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="pos" required>
+                                                            <label class="custom-control-label" for="pos">中油pay</label>
+                                                        </div> 
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="posi" required>
+                                                            <label class="custom-control-label" for="posi">停車大聲公</label>
+                                                        </div> 
+                                                        
+                                                    </div>
+                                                    <div id="tab3" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="position" required>
+                                                            <label class="custom-control-label" for="position">星巴克</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                                            <label class="custom-control-label" for="weather">Food Panda</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">Uber Eats</label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab4" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="position" required>
+                                                            <label class="custom-control-label" for="position">Netflix</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                                            <label class="custom-control-label" for="weather">KKBOX</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">Spotify</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">威秀</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">國賓</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">YouTube Premiom</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">myMusic</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">愛奇藝</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">friDay</label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab5" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="position" required>
+                                                            <label class="custom-control-label" for="position">Udemy</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                                            <label class="custom-control-label" for="weather">Amazingtalker</label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab6" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="shopee" required>
+                                                            <label class="custom-control-label" for="shopee">蝦皮</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                                            <label class="custom-control-label" for="weather"> 樂天</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">PChome</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">momo購物</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">Pinkoi</label>
+                                                        </div>
+                                                    </div>
+                                                    <div id="tab7" class="tab_content">
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="position" required>
+                                                            <label class="custom-control-label" for="position">白媽媽</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="weather" required>
+                                                            <label class="custom-control-label" for="weather">d+af</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">Shien</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">Inshop</label>
+                                                        </div>
+                                                        <div class="custom-control custom-checkbox">
+                                                            <input type="checkbox" class="custom-control-input" id="time" required>
+                                                            <label class="custom-control-label" for="time">vacanza</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                           
+                                           
+                                                
+                                                
+                                               
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>   
+                            </div>
 
 
                             <div class="row">
@@ -351,6 +558,35 @@
     <script src="../assets/libs/js/main-js.js"></script>
     <script src="../assets/vendor/inputmask/js/jquery.inputmask.bundle.js"></script>
     <script>
+      
+        $(function(){
+	// 預設顯示第一個 Tab
+	var _showTab = 0;
+	$('.abgne_tab').each(function(){
+		// 目前的頁籤區塊
+		var $tab = $(this);
+ 
+		var $defaultLi = $('ul.nav-tabs li', $tab).eq(_showTab).addClass('active');
+		$($defaultLi.find('a').attr('href')).siblings().hide();
+ 
+		// 當 li 頁籤被點擊時...
+		// 若要改成滑鼠移到 li 頁籤就切換時, 把 click 改成 mouseover
+		$('ul.nav-tabs li', $tab).click(function() {
+			// 找出 li 中的超連結 href(#id)
+			var $this = $(this),
+				_clickTab = $this.find('a').attr('href');
+			// 把目前點擊到的 li 頁籤加上 .active
+			// 並把兄弟元素中有 .active 的都移除 class
+			$this.addClass('active').siblings('.active').removeClass('active');
+			// 淡入相對應的內容並隱藏兄弟元素
+			$(_clickTab).stop(false, true).fadeIn().siblings().hide();
+ 
+			return false;
+		}).find('a').focus(function(){
+			this.blur();
+		});
+	});
+});
     $(function(e) {
         "use strict";
         $(".date-inputmask").inputmask("dd/mm/yyyy"),

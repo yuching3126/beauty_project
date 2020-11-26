@@ -372,8 +372,8 @@ address {}
 }
 
 .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #5969ff;
-    border-color: #5969ff;
+    background-color: #58c68c;
+    border-color: #58c68c;
 }
 
 .custom-control-input:checked~.custom-control-label::before {
@@ -1469,7 +1469,7 @@ Top Header
 .nav-user-name {}
 
 .nav-user-info {
-    background-color: #5969ff;
+    background-color: #58c68c;
     line-height: 1.4;
     padding: 12px;
     color: #fff;
@@ -1913,7 +1913,7 @@ Sidebar Page Navigations
 }
 
 .dropdown-item:hover {
-    color: #5969ff;
+    color: #58c68c;
     background: #efeff6;
 }
 
@@ -1923,7 +1923,7 @@ Sidebar Page Navigations
 .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #5969ff;
+    background-color: #58c68c;
 }
 
 
@@ -2010,7 +2010,7 @@ Pageheader
 }
 
 .page-breadcrumb .breadcrumb-link:hover {
-    color: #5969ff;
+    color: #58c68c;
 }
 
 .page-breadcrumb .breadcrumb {
@@ -2930,8 +2930,8 @@ clip-path: polygon(10% 25%, 10% 0, 35% 0%, 65% 0%, 90% 0, 90% 25%, 90% 50%, 91% 
 .btn-outline-primary.focus,
 .btn-outline-primary:focus {
     color: #fff;
-    background-color: #5969ff;
-    border-color: #5969ff;
+    background-color: #58c68c;
+    border-color: #58c68c;
     box-shadow: 0 0 0 1px rgb(65, 77, 167);
 }
 
@@ -3178,7 +3178,7 @@ btn-link
 -------------------------*/
 
 .btn-link {
-    color: #5969ff;
+    color: #58c68c;
 }
 
 .btn-link:hover {
@@ -3573,7 +3573,7 @@ btn-link
 .tab-regular .nav-tabs .nav-link.active {
     background-color: #fff;
     border-color: #e6e6f2 #e6e6f2 #fff;
-    color: #5969ff;
+    color: #58c68c;
 }
 
 .tab-regular .tab-content {
@@ -3614,7 +3614,7 @@ btn-link
 }
 
 .tab-vertical .nav-tabs .nav-link.active {
-    color: #5969ff;
+    color: #58c68c;
     background-color: #fff !important;
     border-color: transparent !important;
 }
@@ -3655,7 +3655,7 @@ btn-link
 .tab-outline .nav.nav-tabs .nav-item {}
 
 .tab-outline .nav-tabs .nav-link.active {
-    color: #5969ff !important;
+    color: #58c68c !important;
     background-color: transparent !important;
     border-color: #c4c4cf #c4c4cf #efeff6 !important;
 }
@@ -3663,7 +3663,7 @@ btn-link
 .tab-outline .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
     border-color: transparent;
-    color: #5969ff !important;
+    color: #58c68c !important;
 }
 
 .tab-outline .tab-content {
