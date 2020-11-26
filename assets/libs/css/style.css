@@ -216,7 +216,7 @@ a {
 }
 
 a:hover {
-    color: #ff407b;
+    color: #53c68c;
     text-decoration: none;
 }
 
@@ -4230,8 +4230,8 @@ Pills vertical
 }
 
 .spinner-danger {
-    border-top-color: #dc3545;
-    border-left-color: #dc3545;
+    border-top-color: #53c68c;
+    border-left-color: #53c68c;
 }
 
 .spinner-warning {
