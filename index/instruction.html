@@ -138,7 +138,7 @@
                                             <nav aria-label="breadcrumb">
 <ol class="breadcrumb">
 
-                                                    <li class="breadcrumb-item active" aria-current="page">Instructions</li>
+                                                    <li class="breadcrumb-item active" aria-current="page">Installation</li>
                                                 </ol>
                                             </nav>
                                         </div>
@@ -332,12 +332,16 @@
                                     <p>&emsp;&emsp;In addition to the history records from the APP, the API can also get the place that users are when they ask for recommendations. The API will find out the specific place that users are. If the API could not determine by latitude and longitude, users would be thought to be at the place that is nearest to them. On the same time, the place should be in the 5 place types that we mentioned above.</p>
                                     <p>&emsp;&emsp;As we mentioned before, there are new users and regulars. For regulars, the API has already got enough data from their history records to make recommendations. As for new users, we have a cold start problem. Thus, the API will do grouping to make recommendations to new users.</p>
                                     <p><i><b><span style="background-color:#ffff99">def find_similar(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function takes the result from decision tree to find the similarity between users and users to do grouping.</p>
+                                    <br/>&emsp;&emsp;The function is to divide existing users into groups by combining k-means clustering and decision tree. First, read csv file, which includes users’ age, sex, income, average cost per month and preference to several locations, by pandas. Then we use k-means clustering by certain features and get the clustering result, which will be the input of decision tree. After performing decision tree on k-means clustering result, we obtain the classification result of existing users.
                                     <p>&emsp;&emsp;When recommending cards that users already have,  the API takes users’ positions, time, users’ moving speed into consideration. Besides, the API would also determine whether users can drive or not to evaluate the importance of discount for parking and gas to users. Those functions below are paying attention to those background information.</p>
                                     <p><i><b><span style="background-color:#ffff99">def distance(origin,destinations):</span></b></i>
                                     <br/>&emsp;&emsp;To calculate the distance between the user’s position and the destinations. The destinations are in a list that contains the 5 place types’ positions, and the function will return the one with the shortest distance, namely the one that takes less time.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def classification(id_number):</span></b></i>
+                                    <p><i><b><span style="background-color:#ffff99">def kmean_score_and_tree():</span></b></i>
                                     <br/>&emsp;&emsp;The function takes the result of find_similar, and finds the place type that users in the same group usually go. Those place types will get extra points to the new user’s recommendation list.</p>
+                                    <p><i><b><span style="background-color:#ffff99">def tree_to_code(tree, feature_names,feature_value):</span></b></i><br/>
+                                        <i><b><span style="background-color:#ffff99">def classification_(clf,group_place_score,feature_value,feature_cols,context_sum):
+                                        </span></b></i><br/>
+                                        &emsp;&emsp;After obtaining the decision tree and the feature value of the current user, the function <i>classification_</i> will classify the user by <i>tree_to_code</i> and add points according to the preference of the group.</p>
                                     <p><i><b><span style="background-color:#ffff99">def can_drive_or_not(id_number):</span></b></i>
                                     <br/>&emsp;&emsp;The function is to know whether users can drive or not. First, through users’ accounting records, we can know whether users have spent money on gas or parking fees or not. Second, the function will take their preference of place and preference of discount to know whether gas or parking fees are important to their daily life. Last, the function will return yes or no according to the result from the first two steps.</p>
                                     <p><i><b><span style="background-color:#ffff99">def speed(speed_per_hour):</span></b></i>
