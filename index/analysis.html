@@ -239,6 +239,8 @@
                         <div class="row"> 
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <h3>Card Analysis & RecommemDation</h3>
+                                <details><summary>推薦使用率</summary><p>&emsp;&emsp;分為推薦率以及推薦採用率。其中推薦率為該卡片受到推薦系統推薦的頻率;推薦採用率則為受到推薦的卡片中被採用的佔比。又將其分為辦卡及用卡。
+                                    表格中的卡片為銀行選擇分析的卡片，而推薦結果資料則來自系統所有的推薦結果。另外，點選"查看圖表"可看到推薦率的長期走向。希望透過此分析幫助銀行更了解自身在系統上的曝光度。</p></details>
                             </div>
                         </div>
                    
@@ -256,10 +258,11 @@
                             <thead class="bg-light">
                             <tr class="border-0">
                             <th class="border-0"><B>卡片名稱</B></th>
-                            <th class="border-0"><B>推薦使用率</B></th>
+                            <th class="border-0"><B>推薦率</B></th>
                             <th class="border-0">排名</th>
                             <th class="border-0">最常出現名次</th>
-                            <th class="border-0">推薦使用率變化量</th>
+                            <th class="border-0">推薦率變化量</th>
+                            <th class="border-0">推薦採用率</th>
                            </tr>
                            </thead>
                            <tbody>
@@ -273,6 +276,7 @@
                                         <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">4.02%</span>
                                     </div>
                                 </td>
+                                <td>56%</td>
                              </tr>
                              <tr>
                                  <td>B卡片</td>
@@ -284,6 +288,7 @@
                                             <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">2.48%</span>
                                         </div>
                                     </td>
+                                    <td>74%</td>
                                 </tr>
                                 <tr>
                                     <td>C卡片</td>
@@ -295,6 +300,7 @@
                                             <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">1.86%</span>
                                         </div>
                                         </td>
+                                        <td>83%</td>
                                 </tr>
                                 <tr>
                                     <td>D卡片</td>
@@ -306,6 +312,7 @@
                                             <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.36%</span>
                                         </div>
                                     </td>
+                                    <td>80%</td>
                                 </tr>
                                 <tr>
                                     <td>E卡片</td>
@@ -317,17 +324,19 @@
                                             <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">3.28%</span>
                                         </div>
                                     </td>
+                                    <td>48%</td>
                                 </tr>
                            </tbody>
                             </table>
                                 <table class="table">
                                     <thead class="bg-light">
                                     <tr class="border-0">
-                                    <th class="border-0"><B>卡片名稱</B></th>
-                                    <th class="border-0"><B>推薦使用率</B></th>
+                                    <th class="border-0"><B>銀行名稱</B></th>
+                                    <th class="border-0"><B>推薦率</B></th>
                                     <th class="border-0">排名</th>
                                     <th class="border-0">最常出現名次</th>
-                                    <th class="border-0">推薦使用率變化量</th>
+                                    <th class="border-0">推薦率變化量</th>
+                                    <th class="border-0">推薦採用率</th>
                                    </tr>
                                    </thead>
                                    <tbody>
@@ -341,13 +350,15 @@
                                             <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">7.02%</span>
                                         </div>
                                     </td>
+                                    <td>72%</td>
                                 </tr>
                                 <tr>
                                 </tr>  
                             </tbody>
                         </table>
-                        <p>*推薦使用率:推薦卡片被使用次數/api的推薦總筆數
-                            <br/>*推薦使用率最常出現名次:卡片在推薦結果名次的眾數</p>
+                        <p>*推薦率:卡片被系統推薦次數/api的推薦總筆數
+                            <br/>*推薦率最常出現名次:卡片在推薦結果名次的眾數
+                            <br/>*推薦採用率:卡片被使用/卡片被系統推薦次數</p>
                     </div>
                 </div>
             </div>
@@ -361,10 +372,11 @@
                 <thead class="bg-light">
                 <tr class="border-0">
                 <th class="border-0"><B>卡片名稱</B></th>
-                <th class="border-0"><B>用卡推薦使用率</B></th>
+                <th class="border-0"><B>推薦率</B></th>
                 <th class="border-0">排名</th>
                 <th class="border-0">最常出現名次</th>
-                <th class="border-0">推薦使用率變化量</th>
+                <th class="border-0">推薦率變化量</th>
+                <th class="border-0">推薦採用率</th>
                </tr>
                </thead>
                <tbody>
@@ -377,7 +389,8 @@
                         <div class="metric-label d-inline-block text-danger font-weight-bold">
                             <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">4.28%</span>
                         </div>
-                    </td>   
+                    </td> 
+                    <td>68%</td>  
                  </tr>
                  <tr>
                      <td>B卡片</td>
@@ -389,6 +402,7 @@
                                 <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">5.02%</span>
                             </div>
                         </td>
+                        <td>42%</td>
                     </tr>
                     <tr>
                         <td>C卡片</td>
@@ -400,6 +414,7 @@
                                 <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">1.37%</span>
                             </div>
                         </td>
+                        <td>77&</td>
                     </tr>
                     <tr>
                         <td>D卡片</td>
@@ -411,6 +426,7 @@
                                 <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">2.12%</span>
                             </div>
                         </td>
+                        <td>82%</td>
                     </tr>
                     <tr>
                         <td>E卡片</td>
@@ -422,17 +438,19 @@
                                 <span class="icon-circle-small icon-box-xs text-danger bg-danger-light bg-danger-light "><i class="fa fa-fw fa-arrow-down"></i></span><span class="ml-1">3.48%</span>
                             </div>
                         </td>
+                        <td>30%</td>
                     </tr>
                </tbody>
                 </table>
                     <table class="table">
                         <thead class="bg-light">
                         <tr class="border-0">
-                        <th class="border-0"><B>卡片名稱</B></th>
-                        <th class="border-0"><B>用卡推薦使用率</B></th>
+                        <th class="border-0"><B>銀行名稱</B></th>
+                        <th class="border-0"><B>推薦率</B></th>
                         <th class="border-0">排名</th>
                         <th class="border-0">最常出現名次</th>
-                        <th class="border-0">推薦使用率變化量</th>
+                        <th class="border-0">推薦率變化量</th>
+                        <th class="border-0">推薦採用率</th>
                        </tr>
                        </thead>
                        <tbody>
@@ -446,6 +464,7 @@
                                 <span class="icon-circle-small icon-box-xs text-success bg-success-light"><i class="fa fa-fw fa-arrow-up"></i></span><span class="ml-1">6.32%</span>
                             </div>
                         </td>
+                        <td>83%</td>
                     </tr>
                     <tr>
                     <td>
@@ -457,10 +476,18 @@
         </div>
     </div>
 </div>
+
 </div> 
                     
 
                         <h3>&emsp;Users Shopping Habits & Preference</h3>
+                        
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <details><summary>用戶消費習慣分析</summary><p>&emsp;&emsp;從消費地點著手，了解用戶的消費選擇偏好。提供全體用戶常去地點以及特定用戶常去地點。
+                                在全體用戶常去地點中，先列出前五名的表格，再提供圓餅圖以了解更多資訊。而點擊"更多比較"可以看到特定用戶常去地點。在特定用戶常去地點中，銀行可以先選擇篩選條件，找出特定族群常去的消費地點做排名。
+                                <br/>&emsp;&emsp;這些資料來自於引吭勾選的多個app軟體使用者。將用戶在各家銀行的資料加以整理分析並在保護個資的前提下提供給銀行，可讓單一銀行能用更宏觀的角度了解消費者的偏好；而銀行可依照目標客群特質篩選，了解特定客群常去地點以作為未來合作對象參考。
+                            </p></details>
+                        </div>
                                     <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                                         
                                         <div class="card">
@@ -484,28 +511,29 @@
                                            <tr>
                                             <td>1</td>
                                             <td>
+                                            <div class="m-r-10"><img src="assets/images/dudu.png" alt="user" class="rounded" width="45"></div>
+                                            </td>
+                                            <td>嘟嘟房停車場</td>
+                                            <td>20,127</td>
+                                            <td>$18,100.00</td>
+                                            <td>328</td>
+                                            <td>30%</td>
+                                            <td>70%</td>
+                                            </tr>
+                                            <tr>
+                                            <td>2</td>
+                                            <td>
         <div class="m-r-10"><img src="assets/images/全聯.png" alt="user" class="rounded" width="45"></div>
         </td>
         <td>全聯 </td>
-        <td>20,127 </td>
+        <td>14,363 </td>
         <td>$62,936.00</td>
         <td>928</td>
         <td>54%</td>
         <td>46%</td>    
         </tr>
         <tr>
-        <td>2</td>
-        <td>
-        <div class="m-r-10"><img src="assets/images/dudu.png" alt="user" class="rounded" width="45"></div>
-        </td>
-        <td>嘟嘟房停車場</td>
-        <td>14,363</td>
-        <td>$18,100.00</td>
-        <td>328</td>
-        <td>30%</td>
-        <td>70%</td>
-        </tr>
-        <tr>
+        
         <td>3</td>
         <td>
         <div class="m-r-10"><img src="assets/images/cosmed.png" alt="user" class="rounded" width="45"></div>
@@ -542,7 +570,7 @@
         <td>80%</td>
         </tr>
         <tr>
-        <td colspan="9"><a href="#GRAPH" class="btn btn-outline-light float-right">查看更多</a></td>
+        <td colspan="9"><a href="#more" class="btn btn-outline-light float-right">更多比較</a></td>
         </tr>
         </tbody>
         </table>
@@ -566,7 +594,7 @@
                                     <div class="row">
                                 <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="card" >
-                                    <h5 class="card-header">銀行總體用卡推薦使用率長期走向</h5>
+                                    <h5 class="card-header">銀行總體用卡推薦率長期走向</h5>
                                     <div class="form-control">
                                         <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
                                         <select id="ChangeInfo_2" onchange="ChangeData_2()">
@@ -583,9 +611,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12" id="more">
                                 <div class="card">
-                                    <h5 class="card-header">尋找客群</h5>
+                                    <h5 class="card-header">特定用戶常去地點分析</h5>
                                     <div class="form-control">
                                         <label>filter<i class="fa fa-filter" aria-hidden="true"></i>性別</label>
                                         <select id="ChangeInfo_time" onchange="ChangeData_time()">
@@ -593,23 +621,23 @@
                                             <option value="value">女</option>
                                         </select>
                                         <label>年齡</label>
-                                        <select  id="ChangeInfo_time" onchange="ChangeData_time()">
-                                            <option value="week_CVR">20-25</option>
-                                            <option value="month_CVR">26-30</option>
-                                            <option value="month_CVR">31-35</option>
-                                            <option value="month_CVR">36-40</option>
-                                            <option value="month_CVR">41-45</option>
-                                            <option value="month_CVR">46以上</option>
+                                        <select  id="ChangeInfo_time1" onchange="ChangeData_time1()">
+                                            <option value="value">20-25</option>
+                                            <option value="26-30">26-30</option>
+                                            <option value="31-35">31-35</option>
+                                            <option value="36-40">36-40</option>
+                                            <option value="41-45">41-45</option>
+                                            <option value="46++">46以上</option>
                                         </select>
                                         <label>月刷卡金額</label>
-                                        <select  id="ChangeInfo_time" onchange="ChangeData_time()">
-                                            <option value="week_CVR">1000-3000</option>
-                                            <option value="month_CVR">3001-5000</option>
-                                            <option value="month_CVR">5001-8000</option>
-                                            <option value="month_CVR">8001-10000</option>
-                                            <option value="month_CVR">10001-15000</option>
-                                            <option value="month_CVR">15001-20000</option>
-                                            <option value="month_CVR">20001以上
+                                        <select  id="ChangeInfo_time2" onchange="ChangeData_time2()">
+                                            <option value="tt">1000-3000</option>
+                                            <option value="ww">3001-5000</option>
+                                            <option value="ee">5001-8000</option>
+                                            <option value="cc">8001-10000</option>
+                                            <option value="aa">10001-15000</option>
+                                            <option value="rr">15001-20000</option>
+                                            <option value="dd">20001以上
                                             </option>
                                         </select>
                                     </div>
@@ -786,6 +814,22 @@ var ctxB = document.getElementById("bar-Chart").getContext('2d');
         "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#DECF57",
         ],
       }]};
+      var value_2 = {
+        labels:['悠遊卡','台灣優衣褲','嘟嘟房','家樂福', '台灣中油', '威秀影城'],
+        datasets:[{
+        data: [40,25,23,19,12,2],
+        backgroundColor: [
+        "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#DECF57",
+        ],
+      }]};
+      var value_3 = {
+        labels:['悠遊卡','台灣優衣褲','嘟嘟房','家樂福', '台灣中油', '威秀影城'],
+        datasets:[{
+        data: [36,25,23,19,12,6],
+        backgroundColor: [
+        "#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850","#DECF57",
+        ],
+      }]};
  
 
 var ctx = document.getElementById("myChart_2");
@@ -842,13 +886,40 @@ function ChangeData_time(){
   if (getValue == 'value_1'){
     bar_category.data = value_1;
     document.getElementById('time_filter').innerHTML= '';
-  }else if (getValue == 'value'){
+    
+}else if (getValue == 'value'){
+ 
     bar_category.data = value;
     document.getElementById('time_filter').innerHTML= '';
-  }
+    
+}
+  bar_category.update();
+
+}
+function ChangeData_time1(){
+  var getValue = document.getElementById("ChangeInfo_time1").value;
+  if (getValue == '46++'||'36-40'||'26-30'){
+    bar_category.data = value_2;
+    document.getElementById('time_filter').innerHTML= '';
+    
+}else{ 
+    bar_category.data = value;
+    document.getElementById('time_filter').innerHTML= ''; 
+}
   bar_category.update();
 }
-
+function ChangeData_time2(){
+  var getValue = document.getElementById("ChangeInfo_time2").value;
+  if (getValue =='tt'||'ee'||'cc'||'rr'){
+    bar_category.data = value_3;
+    document.getElementById('time_filter').innerHTML= '';
+    
+}else{ 
+    bar_category.data = value_2;
+    document.getElementById('time_filter').innerHTML= ''; 
+}
+  bar_category.update();
+}
 var ctx = document.getElementById('canvasPie-2');
 var pieChart = new Chart(ctx, {
     type: 'pie',

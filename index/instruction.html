@@ -254,50 +254,57 @@
                                         basic information, and all the credit cards that the user has. Before making recommendations, take the 
                                         user’s income and job occupation into consideration. Last, make sure users’ positions are allowed to 
                                         use the discount that the API recommends.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def parking_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</span></b></i>
-                                    </p>
-                                    <p><i><b><span style="background-color:#ffff99">def cash_return_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</span></b></i>
-                                    </p>
-                                    <p><i><b><span style="background-color:#ffff99">def gas_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The order of the recommendation comes to discount for this time, cash back, gasoline money, and point rewards. The function will find out the most used way that users add gasoline. (Hand oiling/Self-service)</p>
-                                    <p><i><b><span style="background-color:#ffff99">def point_return_discount_for_apply_withLocation (lat,lng,place_name,place_type,auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;For bonus reward, determine whether the card will amplify bonus and extra bonus for birthday first, then compare the two discounts and save them into the recommend list. They will be saved as how many times that the card amplifies the bonus and how much for one dollar. One thing to notice, only bonus for banks is included in the calculations. The function will find places where the discount is available by using places’ names and place types.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def movie_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;For movie discount, the discount, x % off, is better than the discount, minus x dollars, by default. Unless, the discounted price can be known before shopping. </p>
-                                    <p>&emsp;&emsp;The recommendations for the cards that users already have need to know what kind of credit cards that users have and to determine whether the discounts can be used by those cards. Further comparison for recommendations are noted in each function below.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def parking_discount(lat, lng, return place_ name,id_number):</span></b></i>
-                                    </p>
-                                    <p><i><b><span style="background-color:#ffff99">def cash_return_discount(lat, lng, return place_ name,id_number):</span></b></i>
-                                    </p>
-                                    <p><i><b><span style="background-color:#ffff99">def gas_discount(lat ,lng, return place_ name,id_number):</span></b></i>
-                                    <br/>&emsp;&emsp;The order of the recommendation comes to discount for this time, cash back, gasoline money*, and point rewards. The function will find out the most used way that users add gasoline. (Hand oiling/Self-service)
+                                    <details><summary><i><b>def parking_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</b></i>
+                                    <br/>&emsp;
+                                    <i><b>def cash_return_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</b></i>
+                                    <br/>&emsp;
+                                    <i><b>def gas_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The order of the recommendation comes to discount for this time, cash back, gasoline money, and point rewards. The function will find out the most used way that users add gasoline. (Hand oiling/Self-service)</p></details>
+                                    <br/>
+                                    <details><summary><i><b>def point_return_discount_for_apply_withLocation (lat,lng,place_name,place_type,auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;For bonus reward, determine whether the card will amplify bonus and extra bonus for birthday first, then compare the two discounts and save them into the recommend list. They will be saved as how many times that the card amplifies the bonus and how much for one dollar. One thing to notice, only bonus for banks is included in the calculations. The function will find places where the discount is available by using places’ names and place types.</p></details>
+                                    <br/>
+                                    <details><summary><i><b>def movie_discount_for_apply_withLocation(lat,lng,place_name,auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;For movie discount, the discount, x % off, is better than the discount, minus x dollars, by default. Unless, the discounted price can be known before shopping. </p></details>
+                                    <br/><p>&emsp;&emsp;The recommendations for the cards that users already have need to know what kind of credit cards that users have and to determine whether the discounts can be used by those cards. Further comparison for recommendations are noted in each function below.</p>
+                                    <details><summary><i><b>def parking_discount(lat, lng, return place_ name,id_number):</b></i>
+                                    <br/>&emsp;
+                                    <i><b>def cash_return_discount(lat, lng, return place_ name,id_number):</b></i>
+                                    <br/>&emsp;
+                                    <i><b>def gas_discount(lat ,lng, return place_ name,id_number):</b></i></summary>
+                                    <p>&emsp;&emsp;The order of the recommendation comes to discount for this time, cash back, gasoline money*, and point rewards. The function will find out the most used way that users add gasoline. (Hand oiling/Self-service)
                                     <br/>*gasoline money: can be used to change other gifts that the gasoline company offered.
-                                    </p>
-                                    <p><i><b><span style="background-color:#ffff99">def point_return_discount(lat, lng, return place_ name,id_number):</span></b></i>
-                                    <br/>&emsp;&emsp;For bonus reward, determine whether the card will amplify bonus and extra bonus for birthday first, then compare the two discounts and save them into the recommend list. They will be saved as how many times that the card amplifies the bonus and how much for one dollar. One thing to notice, only bonus for banks is included in the calculations. The function will find places where the discount is available by using places’ names and place types.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def movie_discount(lat, lng, return place_ name,id_number):</span></b></i>
-                                    <br/>&emsp;&emsp;For movie discount, the discount, x % off, is better than the discount, minus x dollars, by default. Unless, the discounted price can be known before shopping. </p>
-                                    <p><i><b><span style="background-color:#ffff99">def return_enough(resp1,resp2):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to determine whether the first recommendation list gets the enough results (3 results) or not. If not, the results in the second list will make up for the absence.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def has_limit_or_not(limit_str):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to find the limit on credit cards’ usage count and turn it from string type into int type.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def cannot_use_in_here(place_list):</span></b></i>
-                                    <br/>&emsp;&emsp;Among all the credit card discounts, there might be a note that mentions the discount is not for those places. The function will return those places.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def can_use_in_here(place_name,place_list):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to determine whether credit cards’ discount can be used at the place(shop) where users are.</p>
-                                    <p>&emsp;&emsp;The two functions below are to convert the results as narratives when returning<br/>
-                                    <i><b><span style="background-color:#ffff99">def update_which(result):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is for gas. The discounts for gas (cash back/ point/price discount) will be converted.<br/>
-                                    <i><b><span style="background-color:#ffff99">def update_which_type(result):</span></b></i>
-                                    <br/>&emsp;&emsp;The function for movies.The discounts for movies (x% off/ minus  dollars) will be converted. </p>
+                                    </p></details>
+                                    <br/>
+                                    <details><summary><i><b>def point_return_discount(lat, lng, return place_ name,id_number):</b></i></summary>
+                                    <p>&emsp;&emsp;For bonus reward, determine whether the card will amplify bonus and extra bonus for birthday first, then compare the two discounts and save them into the recommend list. They will be saved as how many times that the card amplifies the bonus and how much for one dollar. One thing to notice, only bonus for banks is included in the calculations. The function will find places where the discount is available by using places’ names and place types.</p></details>
+                                    <br/>
+                                    <details><summary><i><b>def movie_discount(lat, lng, return place_ name,id_number):</b></i></summary>
+                                    <p>&emsp;&emsp;For movie discount, the discount, x % off, is better than the discount, minus x dollars, by default. Unless, the discounted price can be known before shopping. </p></details>
+                                    <br/>
+                                    <details><summary><i><b>def return_enough(resp1,resp2):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to determine whether the first recommendation list gets the enough results (3 results) or not. If not, the results in the second list will make up for the absence.</p></details>
+                                    <br/>
+                                    <details><summary><i><b>def has_limit_or_not(limit_str):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to find the limit on credit cards’ usage count and turn it from string type into int type.</p></details><br/>
+                                    <details><summary><i><b>def cannot_use_in_here(place_list):</b></i></summary>
+                                    <p>&emsp;&emsp;Among all the credit card discounts, there might be a note that mentions the discount is not for those places. The function will return those places.</p></details><br/>
+                                    <details><summary><i><b>def can_use_in_here(place_name,place_list):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to determine whether credit cards’ discount can be used at the place(shop) where users are.</p></details><br/>
+                                    
+                                    <p>&emsp;&emsp;The two functions below are to convert the results as narratives when returning.
+                                    <details><summary><i><b>def update_which(result):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is for gas. The discounts for gas (cash back/ point/price discount) will be converted.</p></details>
+                                    <details><summary><i><b>def update_which_type(result):</b></i></summary>
+                                    <p>&emsp;&emsp;The function for movies.The discounts for movies (x% off/ minus  dollars) will be converted. </p></details><br/>
                                     <p>&emsp;&emsp;The following functions are to calculate how much users have spent on the cards.<br/>
-                                    <i><b><span style="background-color:#ffff99">def total_consumption_last_month(card_name):
-                                        <br/>def total_consumption_last_three_months(card_name):
-                                        <br/>def total_consumption_last_year(card_name):
-                                        </span></b></i>
-                                    <br/>&emsp;&emsp;</p>
-                                    <p><i><b><span style="background-color:#ffff99">def cash_or_point(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to check which users prefer, cash back or bonus reward.</p>
+                                        <i><b>&emsp;def total_consumption_last_month(card_name):
+                                        <br/>&emsp;def total_consumption_last_three_months(card_name):
+                                        <br/>&emsp;def total_consumption_last_year(card_name):
+                                        </b></i>
+                                    </p>
+                                    <details><summary><i><b>def cash_or_point(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to check which users prefer, cash back or bonus reward.</p></details><br/>
                                     
 
 
@@ -315,12 +322,12 @@
                                     <p>&emsp;&emsp;The class mainly deals with the information that we get from the APP that is 
                                         connected to the API and what kinds of conditions we pay attention to before making 
                                         recommendations.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def change_user_status(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;There are two kinds of users in the API. Once a user has used the APP for more than three months and he/she has more than 250 records in the APP, we’ll change him/her as a regular. Otherwise, he/she would be seen as a new user.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def user_status(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;To make sure which identity the user is, a new user or a regular.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def place_preference(auth_id, context_sum,weight):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to take users’ preference of place type into consideration when making recommendations.</p>
+                                        <details><summary><i><b>def change_user_status(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;There are two kinds of users in the API. Once a user has used the APP for more than three months and he/she has more than 250 records in the APP, we’ll change him/her as a regular. Otherwise, he/she would be seen as a new user.</p></details><br/>
+                                    <details><summary><i><b>def user_status(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;To make sure which identity the user is, a new user or a regular.</p></details><br/>
+                                    <details><summary><i><b>def place_preference(auth_id, context_sum,weight):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to take users’ preference of place type into consideration when making recommendations.</p></details><br/>
                                     <p>&emsp;&emsp;Next, we’ll get to deal with the information collected from the APP. Given that the recommendations are mainly according to the place type. First of all, the API will get the places that the user has been to from the records of the APP and those places would be classified into 5 categories if they belong to the 5 categories. They are restaurants & cafe, department stores & shopping malls, movie theaters, parking lot, and gas stations.</p>
                                     <p># The API’s place type: Labels from google map<br/>
                                         # 百貨公司: department_store, shopping_mall<br/>
@@ -331,34 +338,34 @@
                                         </p>
                                     <p>&emsp;&emsp;In addition to the history records from the APP, the API can also get the place that users are when they ask for recommendations. The API will find out the specific place that users are. If the API could not determine by latitude and longitude, users would be thought to be at the place that is nearest to them. On the same time, the place should be in the 5 place types that we mentioned above.</p>
                                     <p>&emsp;&emsp;As we mentioned before, there are new users and regulars. For regulars, the API has already got enough data from their history records to make recommendations. As for new users, we have a cold start problem. Thus, the API will do grouping to make recommendations to new users.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def find_similar(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to divide existing users into groups by combining k-means clustering and decision tree. First, read csv file, which includes users’ age, sex, income, average cost per month and preference to several locations, by pandas. Then we use k-means clustering by certain features and get the clustering result, which will be the input of decision tree. After performing decision tree on k-means clustering result, we obtain the classification result of existing users.
+                                    <details><summary><i><b>def find_similar(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to divide existing users into groups by combining k-means clustering and decision tree. First, read csv file, which includes users’ age, sex, income, average cost per month and preference to several locations, by pandas. Then we use k-means clustering by certain features and get the clustering result, which will be the input of decision tree. After performing decision tree on k-means clustering result, we obtain the classification result of existing users.</p></details><br/>
                                     <p>&emsp;&emsp;When recommending cards that users already have,  the API takes users’ positions, time, users’ moving speed into consideration. Besides, the API would also determine whether users can drive or not to evaluate the importance of discount for parking and gas to users. Those functions below are paying attention to those background information.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def distance(origin,destinations):</span></b></i>
-                                    <br/>&emsp;&emsp;To calculate the distance between the user’s position and the destinations. The destinations are in a list that contains the 5 place types’ positions, and the function will return the one with the shortest distance, namely the one that takes less time.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def kmean_score_and_tree():</span></b></i>
-                                    <br/>&emsp;&emsp;The function takes the result of find_similar, and finds the place type that users in the same group usually go. Those place types will get extra points to the new user’s recommendation list.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def tree_to_code(tree, feature_names,feature_value):</span></b></i><br/>
-                                        <i><b><span style="background-color:#ffff99">def classification_(clf,group_place_score,feature_value,feature_cols,context_sum):
-                                        </span></b></i><br/>
-                                        &emsp;&emsp;After obtaining the decision tree and the feature value of the current user, the function <i>classification_</i> will classify the user by <i>tree_to_code</i> and add points according to the preference of the group.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def can_drive_or_not(id_number):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to know whether users can drive or not. First, through users’ accounting records, we can know whether users have spent money on gas or parking fees or not. Second, the function will take their preference of place and preference of discount to know whether gas or parking fees are important to their daily life. Last, the function will return yes or no according to the result from the first two steps.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def speed(speed_per_hour):</span></b></i>
-                                    <br/>&emsp;&emsp;After knowing whether users can drive or not, we separate them with three situations. First one is that users can drive and their speed is over 30 km/hr, discount for gas and for parking fee will add three points. Second one is that users can drive and their speed is below 30 km/hr, discount for gas and for parking fee will add one point. Last one is that users cannot drive, then no point will be added.</p>
+                                    <details><summary><i><b>def distance(origin,destinations):</b></i></summary>
+                                    <p>&emsp;&emsp;To calculate the distance between the user’s position and the destinations. The destinations are in a list that contains the 5 place types’ positions, and the function will return the one with the shortest distance, namely the one that takes less time.</p></details><BR/>
+                                    <details><summary><i><b>def kmean_score_and_tree():</b></i></summary>
+                                    <p>&emsp;&emsp;The function takes the result of find_similar, and finds the place type that users in the same group usually go. Those place types will get extra points to the new user’s recommendation list.</p></details><br/>
+                                    <details><summary><i><b>def tree_to_code(tree, feature_names,feature_value):</b></i><br/>&emsp;
+                                        <i><b>def classification_(clf,group_place_score,feature_value,feature_cols,context_sum):
+                                        </b></i></summary>
+                                        <p>&emsp;&emsp;After obtaining the decision tree and the feature value of the current user, the function <i>classification_</i> will classify the user by <i>tree_to_code</i> and add points according to the preference of the group.</p></details><br/>
+                                        <details><summary><i><b>def can_drive_or_not(id_number):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to know whether users can drive or not. First, through users’ accounting records, we can know whether users have spent money on gas or parking fees or not. Second, the function will take their preference of place and preference of discount to know whether gas or parking fees are important to their daily life. Last, the function will return yes or no according to the result from the first two steps.</p></details><br/>
+                                    <details><summary><i><b>def speed(speed_per_hour):</b></i></summary>
+                                    <p>&emsp;&emsp;After knowing whether users can drive or not, we separate them with three situations. First one is that users can drive and their speed is over 30 km/hr, discount for gas and for parking fee will add three points. Second one is that users can drive and their speed is below 30 km/hr, discount for gas and for parking fee will add one point. Last one is that users cannot drive, then no point will be added.</p></details><br/>
                                     <p>&emsp;&emsp;Next, we’ll introduce two algorithms that the API offered to make recommendations. Both algorithms will contain those above-mentioned functions. The APP owners could choose one of the algorithms according to their own preference. </p>
-                                    <p><i><b><span style="background-color:#ffff99">def book_keeping_record_by_freq(auth_id, context_sum, weight):</span></b></i>
-                                    <br/>&emsp;&emsp;The first one is to count the frequency of each place type in the user’s book keeping record. to predict the user’s preference and recommend him/her the related credit card discount.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def book_keeping_record_by_time(auth_id, context_sum, weight):</span></b></i>
-                                    <br/>&emsp;&emsp;The second one is to put more emphasis on users’ habits from the aspect of time. For instance, on Tuesday noon (12 p.m.), the user could get the recommendations that are according to the place type that he/she had been to during the past several Tuesdays from 10 a.m. to 2 p.m. in the recent two months. Among the records that matched the restrictions, the place type on the record that is closer to 12 a.m. would get a higher point.</p>
+                                    <details><summary><i><b>def book_keeping_record_by_freq(auth_id, context_sum, weight):</b></i></summary>
+                                    <p>&emsp;&emsp;The first one is to count the frequency of each place type in the user’s book keeping record. to predict the user’s preference and recommend him/her the related credit card discount.</p></details><br/>
+                                    <details><summary><i><b>def book_keeping_record_by_time(auth_id, context_sum, weight):</b></i></summary>
+                                    <p>&emsp;&emsp;The second one is to put more emphasis on users’ habits from the aspect of time. For instance, on Tuesday noon (12 p.m.), the user could get the recommendations that are according to the place type that he/she had been to during the past several Tuesdays from 10 a.m. to 2 p.m. in the recent two months. Among the records that matched the restrictions, the place type on the record that is closer to 12 a.m. would get a higher point.</p></details><br/>
                                     <p>&emsp;&emsp;Those above-mentioned recommendations only focus on the credit cards that users have had. Next, we’ll introduce the recommendations focus on the credit cards that users might be interested in</p>
-                                    <p><i><b><span style="background-color:#ffff99">def find_place_nearby(lat,lng):</span></b></i>
-                                    <br/>&emsp;&emsp;For each place type, the range is that radius equals 5000. The function uses latitude and longitude to check whether the position is in the range or not. If not, this function will calculate how much time it would take from the position the function gets to the 5 place types, and return the smallest result. Otherwise, users are supposed to be exactly at one of the 5 place types.</p>
+                                    <details><summary><i><b>def find_place_nearby(lat,lng):</b></i></summary>
+                                    <p>&emsp;&emsp;For each place type, the range is that radius equals 5000. The function uses latitude and longitude to check whether the position is in the range or not. If not, this function will calculate how much time it would take from the position the function gets to the 5 place types, and return the smallest result. Otherwise, users are supposed to be exactly at one of the 5 place types.</p></details><br/>
                                     <p>&emsp;&emsp;Besides the moment that users ask for recommendations, the API also puts emphasis on users’ habits. Thus, to find out places that each user often visits is also part of work in the API.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def find_freq_place(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function will count the place. If the place is new to the user’s storage, it would be added to the storage and count as 1. Otherwise, the place will be counted one more time in the storage.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def recommend_discount_for_place(auth_id, place):</span></b></i>
-                                    <br/>&emsp;&emsp;For each place, the function separates them into two groups. One weighs cash back more, while the other weighs bonus reward more. Next, according to users’ preference of place and preference of discount, they will be classified into those groups to get the recommendations. 5 recommendations will be listed in each group.</p>
+                                    <details><summary><i><b>def find_freq_place(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function will count the place. If the place is new to the user’s storage, it would be added to the storage and count as 1. Otherwise, the place will be counted one more time in the storage.</p></details><br/>
+                                    <details><summary><i><b>def recommend_discount_for_place(auth_id, place):</b></i></summary>
+                                    <p>&emsp;&emsp;For each place, the function separates them into two groups. One weighs cash back more, while the other weighs bonus reward more. Next, according to users’ preference of place and preference of discount, they will be classified into those groups to get the recommendations. 5 recommendations will be listed in each group.</p></details><br/>
                                 </div>
                                 </div>
                                 </div>
@@ -374,41 +381,43 @@
                                     <p>&emsp;&emsp;The class is to collect the data from the APP. Take the data in the 
                                         form of JSON and convert the data into String type to decode. Then, convert the 
                                         String type data into dictionary type and save it.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def bookkeeping_to_gLocation(id_number):</span></b></i>
-                                    <br/>&emsp;&emsp;Take the records from the APP. For the places that are included in the 5 categories, make 
+                                        <details><summary><i><b>def bookkeeping_to_gLocation(id_number):</b></i></summary>
+                                    <p>&emsp;&emsp;Take the records from the APP. For the places that are included in the 5 categories, make 
                                     classifications and save them. The storage of records include ID Number, place type, phone number, 
-                                    transaction time, store name, address of the place, latitude and longitude.(convert it whenever users record their expense)</p>
-                                    <p><i><b><span style="background-color:#ffff99">def recommend_place_for_use(auth_id, speed_now):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to calculate and rank users’ preference of place type. Moreover, it could also determine which identity the user is, a novice or a regular, combine with other background information, and return the list, recommend_order, with place 
-                                    types that had ranked inside the list.</p>
+                                    transaction time, store name, address of the place, latitude and longitude.(convert it whenever users record their expense)</p></details><br/>
+                                    <details><summary><i><b>def recommend_place_for_use(auth_id, speed_now):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to calculate and rank users’ preference of place type. Moreover, it could also determine which identity the user is, a novice or a regular, combine with other background information, and return the list, recommend_order, with place 
+                                    types that had ranked inside the list.</p></details><br/>
                                     <p>&emsp;&emsp;The following functions are about recommendations for applying for a new credit card. In this part, two ways of making recommendations are involved. </p>
-                                    <p><i><b><span style="background-color:#ffff99">def recommend_place_for_apply_withPlace(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;When users ask for recommendations, the function will receive the positions that they are if the positions are available. After that, call “recommend_discount_for_place(auth_id, place)” in class context to do recommendations.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def recommend_place_for_apply(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;If users’ positions are not available when they ask for recommendations, the function will find place types that users visit a lot. Then, call the function to return the recommendations. If users are new, the function will call “find_similar(auth_id)” in class context to find similar person first.</p>
+                                    <details><summary><i><b>def recommend_place_for_apply_withPlace(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;When users ask for recommendations, the function will receive the positions that they are if the positions are available. After that, call “recommend_discount_for_place(auth_id, place)” in class context to do recommendations.</p></details><br/>
+                                    <details><summary><i><b>def recommend_place_for_apply(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;If users’ positions are not available when they ask for recommendations, the function will find place types that users visit a lot. Then, call the function to return the recommendations. If users are new, the function will call “find_similar(auth_id)” in class context to find similar person first.</p></details><br/>
                                     <p>&emsp;&emsp;Next part is about recommendations of credit cards that users have had. In this part, those functions need to post, for they need to get users’ positions such as places’ names, latitude, and longitude from the APP. (places that are in the range, r=5, are included.) There are five functions that deal with recommendation requests from 5 different place types. The API would make sure if cash back weighs more than bonus rewards to that user before making recommendations, and those functions will return a list that contains three recommendations.Each place type would have its button. </p>
-                                    <p><i><b><span style="background-color:#ffff99">def mall_recommend(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function would be called if the “mall” button is pressed by users.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def gas_recommend(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function would be called if the “gas” button is pressed by users.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def theater_recommend(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function would be called if the “theaterl” button is pressed by users.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def parking_recommend(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function would be called if the “parking” button is pressed by users.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def restuarant_recommend(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function would be called if the “restaurant” button is pressed by users.</p>
+                                    <details><summary><i><b>def mall_recommend(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function would be called if the “mall” button is pressed by users.</p></details><br/>
+                                    <details><summary><i><b>def gas_recommend(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function would be called if the “gas” button is pressed by users.</p></details><br/>
+                                    <details><summary><i><b>def theater_recommend(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function would be called if the “theaterl” button is pressed by users.</p></details><br/>
+                                    <details><summary><i><b>def parking_recommend(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function would be called if the “parking” button is pressed by users.</p></details><br/>
+                                    <details><summary><i><b>def restuarant_recommend(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function would be called if the “restaurant” button is pressed by users.</p></details><br/>
                                     <p>&emsp;&emsp;The following functions are to deal with the forms that the API ask users to fill in the very beginning.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def add_prefer_place(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to receive users’ preference of place type.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def add_prefer_discount(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to receive users’ preference of discount.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def add_personal_data(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to receive users’ basic information.</p>
-                                    <p><i><b><span style="background-color:#ffff99">def change_personal_data(auth_id):</span></b></i>
-                                    <br/>&emsp;&emsp;The function is to change users’ basic information and preference of discount.</p>
+                                    <details><summary><i><b>def add_prefer_place(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to receive users’ preference of place type.</p></details><br/>
+                                    <details><summary><i><b>def add_prefer_discount(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to receive users’ preference of discount.</p></details><br/>
+                                    <details><summary><i><b>def add_personal_data(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to receive users’ basic information.</p></details><br/>
+                                    <details><summary><i><b>def change_personal_data(auth_id):</b></i></summary>
+                                    <p>&emsp;&emsp;The function is to change users’ basic information and preference of discount.</p></details><br/>
                                     <h5>App.py</h5>
                                     <p>&emsp;&emsp;The class is to connect the API to the database through Flask, a frame of Python. It takes MVC framework that is Model (database), 
                                         View (interface), and Controller where runs algorithms.</p>
+                                        <br/>
+                                        <br/>
                                 </div>
                                 </div>
                                 </div>

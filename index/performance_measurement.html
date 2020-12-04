@@ -207,6 +207,7 @@
           <div class="dashboard-wrapper">
               <div class="dashboard-ecommerce">
                   <div class="container-fluid dashboard-content ">
+                      
                       <!-- ============================================================== -->
                       <!-- pageheader  -->
                       <!-- ============================================================== -->
@@ -233,6 +234,11 @@
                         						
                       <!--total customers-->
                             <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-6 col-sm-12 col-12">
+                                    <details><summary>API成效分析</summary><p>提供當月推薦功能使用總次數、推薦結果採用次數、
+                                        當月使用者人數以及持續使用超過三個月的用戶數以了解APP用戶是否喜歡、滿意推薦服務並產生黏著度，有可能長期使用習慣。
+                                    </p></details>
+                                </div>
                                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                     <div class="card border-3 border-top border-top-primary">
                                         <div class="card-body">
@@ -443,11 +449,11 @@
             	                                </div>
             	                                <div class="card-footer p-0 bg-white d-flex">
             	                                    <div class="card-footer-item card-footer-item-bordered w-50">
-            	                                        <h2 class="mb-0"> 56% </h2>
+            	                                        <h2 class="mb-0"> 60% </h2>
             	                                        <p>Female </p>
             	                                    </div>
             	                                    <div class="card-footer-item card-footer-item-bordered">
-            	                                        <h2 class="mb-0">46% </h2>
+            	                                        <h2 class="mb-0">40% </h2>
             	                                        <p>Male </p>
             	                                    </div>
             	                                </div>
@@ -604,7 +610,7 @@
                         <h3>Advance Mangement</h3>
                         <div class="row">
                                    
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">優惠券發放數量</h5>
@@ -615,7 +621,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
                                         <h5 class="text-muted">兌換數量</h5>
@@ -626,23 +632,126 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
                                 <div class="card border-3 border-top border-top-primary">
                                     <div class="card-body">
-                                        <h5 class="text-muted">兌換率</h5>
+                                        <h5 class="text-muted">信用卡優惠使用數量</h5>
                                         <div class="metric-value d-inline-block">
-                                            <h1 class="mb-1">49%</h1>
+                                            <h1 class="mb-1">12086</h1>
                                         </div>
                                         
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                <div class="card border-3 border-top border-top-primary">
+                                    <div class="card-body">
+                                        <h5 class="text-muted">信用卡優惠使用率</h5>
+                                        <div class="metric-value d-inline-block">
+                                            <h1 class="mb-1">69%</h1>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>                           
                         </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">優惠券兌換率</h5>
+                                    <div class="form-control">
+                                        <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                        <select id="ChangeInfo_" onchange="ChangeData_()">
+                                            <option value="week_">週</option>
+                                            <option value="month_">月</option>
+                                            <option value="year_">年</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-offset-1" id="filter_">
+                                    
+                                    </div>
+                                    <div class="card-body">
+                                        <canvas id="myChart_" width="800" height="350"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                <div class="card">
+                                    <h5 class="card-header">信用卡優惠使用率</h5>
+                                        <div class="form-control">
+                                            <label>filter<i class="fa fa-filter" aria-hidden="true"></i></label>
+                                            <select id="ChangeInfo__" onchange="ChangeData__()">
+                                                <option value="week__">週</option>
+                                                <option value="month__">月</option>
+                                                <option value="year__">年</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-sm-offset-1" id="filter__">
+                                        
+                                        </div>
+                                        <div class="card-body">
+                                            <canvas id="myChart__" width="800" height="350"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                
+                                </div>
+                                <div class="row">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="card">
+                                        <h5 class="card-header">每月各門市銷售資料分析</h5>
+                                        <div class="form-control">
+                                            <label>選擇門市</label>
+                                            <select id="ChangeInfoa" onchange="ChangeDataa()">
+                                                <option value="政大">政大門市</option>
+                                                <option value="興隆">興隆門市</option>
+                                                <option value="師大">師大門市</option>
+                                                <option value="公館">公館門市</option>
+                                                <option value="大坪林">大坪林門市</option>
+                                                <option value="all">各大門市總和</option>
+                                            </select>
+                                            <div class="col-sm-offset-1" id="filtera"></div>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <div class="table-responsive">
+                                            <table class="table">
+                                            <thead class="bg-light">
+                                            <tr class="border-0">
+                                            <th class="border-0">門市名稱</th>
+                                            <th class="border-0">營收</th>
+                                            <th class="border-0">消費人數</th>
+                                            <th class="border-0">交易筆數</th>
+                                            <th class="border-0">客單價</th>
+                                            <th class="border-0">客流量</th>
+                                           </tr>
+                                           </thead>
+                                           <tbody>
+                                           <tr id='政大'>
+                                            <td>政大門市</td>
+                                            <td>$213,500</td>
+                                            <td>1192人</td>
+                                            <td>1325筆</td>
+                                            <td>179</td>
+                                            <td>1.11</td>
+                                            </tr>
+                                            </tbody>
+                                            </table>
 
-                       
-                </div>
+                                            
+                                        </div>
+                                        </div>
+                                        </div>
+                                        </div>
+                        </div>
+                    
+                              
+                          </div>
+    
             </div>
+           
             </div>
+            
 	                        <!-- ============================================================== -->
 	                        <!-- end followers by age   -->
 	                        <!-- ============================================================== -->
@@ -652,27 +761,26 @@
 
 
                        
-
-
-                    <div class="footer">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            © 2020 NCCU MIS. TweetC.A.R.D.
-                        </div>
-                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
-                            <div class="text-md-right footer-links d-none d-sm-block">
-                                
+                            <div class="footer">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                            © 2020 NCCU MIS. TweetC.A.R.D.
+                                        </div>
+                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                                            <div class="text-md-right footer-links d-none d-sm-block">
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-    </div>
-   
+
+                  </div>
+              </div>
+            
+        
+
 <script>
 
       var both = {
@@ -738,6 +846,63 @@
         data: [342, 345, 450, 450],
         backgroundColor:'rgba(255, 64, 123,0.4)',
         borderColor:'rgba(255, 64, 123,1)',
+        borderWidth: 2
+      }]};
+      var week_ = {
+        labels:['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+        datasets:[{
+        label: "優惠券兌換率",
+        data: [12, 19, 23, 23, 26, 23, 29],
+        backgroundColor:'rgba(170, 102, 204,0.4)',
+        borderColor:'rgba(170, 102, 204,1)',
+        borderWidth: 2
+    }]};
+
+      var month_ = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "優惠券兌換率",
+        data: [40, 58, 50, 50, 44, 66, 60, 74, 78, 80, 82, 84],
+        backgroundColor:'rgba(170, 102, 204,0.4)',
+        borderColor:'rgba(170, 102, 204,1)',
+        borderWidth: 2
+      }]};
+
+      var year_ = {
+        labels:[ '2017', '2018', '2019','2020'],
+        datasets:[{
+        label: "優惠券兌換率",
+        data: [342, 345, 450, 450],
+        backgroundColor:'rgba(170, 102, 204,0.4)',
+        borderColor:'rgba(170, 102, 204,1)',
+        borderWidth: 2
+      }]};var week__ = {
+        labels:['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日'],
+        datasets:[{
+        label: "信用卡優惠使用率",
+        data: [15, 19, 20, 23, 26, 23, 29],
+        backgroundColor:'rgba(52, 116, 68,0.4)',
+        borderColor:'rgba(52, 116, 68,1)',
+        borderWidth: 2
+    }]};
+
+      var month__ = {
+        labels: ['1月','2月','3月','4月','5月','6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        datasets:[{
+        label: "信用卡優惠使用率",
+        data: [40, 58, 50, 50, 43, 66, 60, 74, 78, 80, 82, 84],
+        backgroundColor:'rgba(52, 116, 68,0.4)',
+        borderColor:'rgba(52, 116, 68,1)',
+        borderWidth: 2
+      }]};
+
+      var year__ = {
+        labels:[ '2017', '2018', '2019','2020'],
+        datasets:[{
+        label: "信用卡優惠使用率",
+        data: [302, 345, 450, 450],
+        backgroundColor:'rgba(52, 116, 68,0.4)',
+        borderColor:'rgba(52, 116, 68,1)',
         borderWidth: 2
       }]};
       var ratio_r = {
@@ -924,6 +1089,101 @@ function ChangeData_3(){
   }
   myChart_3.update();
 }
+var ctx = document.getElementById("myChart__");
+var myChart__ = new Chart(ctx, {
+    type: 'line',
+    data: week__,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        },
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
+        }
+    }
+}); 
+function ChangeData__(){
+  var getValue = document.getElementById("ChangeInfo__").value;
+  if (getValue == 'week__'){
+    myChart__.data = week__;
+    document.getElementById('filter__').innerHTML= '';
+  }else if (getValue == 'month__'){
+    myChart__.data = month__;
+    document.getElementById('filter__').innerHTML= ''
+  }else if (getValue == 'year__'){
+    myChart__.data= year__;
+    document.getElementById('filter__').innerHTML= '';
+  }
+  myChart__.update();
+}
+var ctx = document.getElementById("myChart_");
+var myChart_ = new Chart(ctx, {
+    type: 'line',
+    data: week_,
+    options: {
+        legend:{
+          display: true,
+          position: 'bottom',
+
+                                    labels: {
+                                        fontColor: '#71748d',
+                                        fontFamily: 'Circular Std Book',
+                                        fontSize: 14,
+                                    }
+        },
+        scales: {
+            xAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            fontSize: 12,
+                                            fontFamily: 'Circular Std Book',
+                                            fontColor: '#71748d',
+                                        }
+                                    }]                           
+        }
+    }
+}); 
+function ChangeData_(){
+  var getValue = document.getElementById("ChangeInfo_").value;
+  if (getValue == 'week_'){
+    myChart_.data = week_;
+    document.getElementById('filter_').innerHTML= '';
+  }else if (getValue == 'month_'){
+    myChart_.data = month_;
+    document.getElementById('filter_').innerHTML= ''
+  }else if (getValue == 'year_'){
+    myChart_.data= year_;
+    document.getElementById('filter_').innerHTML= '';
+  }
+  myChart_.update();
+}
+
     
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
